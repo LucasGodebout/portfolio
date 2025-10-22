@@ -127,6 +127,7 @@
         </div>
         <!-- Système de page Email -->
     <?php
+
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $name = ($_REQUEST['name']);
         $email = ($_REQUEST['email']);
@@ -134,8 +135,10 @@
         $errors = 0;
 
         if (strlen($name) < 2) {
-            echo json_encode(['success' => false, 'message' => 'Le nom doit contenir au moins 2 caractères.']);
             $errors++;
+            echo '<script language="javascript">';
+            echo 'alert("Le nom doit contenir au moins 2 caractères.")';
+            echo '</script>';
         }
 
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -182,7 +185,7 @@
                                     <p class="email-fullname">Lucas Godebout</p>
                                 </div>
                             </div>
-                            <form class="email-form" id="email-form" action="index.php" method="POST">
+                            <form class="email-form" id="email-form" method="POST">
                                 <label for="name" class="email-label">Nom:</label>
                                 <input class="email-input" type="text" name="name" required>
                                 <label for="email" class="email-label">Email:</label>
@@ -199,3 +202,10 @@
     <script src="modal.js"></script>
 </body>
 </html>
+    <script type="text/javascript">
+        $('#contactForm').submit(function () {
+            $.post("mailer.php", $("#contactForm").serialize(), function (data) {
+            });
+            return false;
+        });
+    </script>
