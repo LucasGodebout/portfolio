@@ -649,3 +649,50 @@ p {
         width: 70%;
     }
 }
+
+/* Styles pour le toast */
+.toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 15px 25px;
+    border-radius: 10px;
+    color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 10000;
+    opacity: 0;
+    transform: translateX(400px);
+    transition: all 0.3s ease;
+    max-width: 400px;
+    word-wrap: break-word;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.toast-success {
+    background-color: #43e8d8;
+}
+
+.toast-error {
+    background-color: #ff4444;
+}
+
+@media (max-width: 768px) {
+    .toast {
+        right: 20px;
+        bottom: 20px;
+        left: 20px;
+        max-width: none;
+        transform: translateY(100px);
+    }
+    
+    .toast.show {
+        transform: translateY(0);
+    }
+}

@@ -190,3 +190,93 @@ function closeEmailPage() {
         emailPage.classList.remove('closing');
     }, 300); // Durée de l'animation
 }
+
+// Fonction pour afficher un toast
+function showToast(message, isSuccess) {
+    // Créer l'élément toast
+    const toast = document.createElement('div');
+    toast.className = `toast ${isSuccess ? 'toast-success' : 'toast-error'}`;
+    toast.textContent = message;
+    
+    // Ajouter au body
+    document.body.appendChild(toast);
+    
+    // Animation d'apparition
+    setTimeout(() => {
+        toast.classList.add('show');
+    }, 10);
+    
+    // Supprimer après 3 secondes
+    setTimeout(() => {
+        toast.classList.remove('show');
+        setTimeout(() => {
+            document.body.removeChild(toast);
+        }, 300);
+    }, 3000);
+}
+
+// Gestionnaire pour le formulaire de contact
+document.addEventListener('DOMContentLoaded', function () {
+    const emailForm = document.getElementById('email-form');
+    
+    if (emailForm) {
+        emailForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            // Désactiver le bouton pendant l'envoi
+            const submitButton = emailForm.querySelector('.email-submit');
+            const originalButtonText = submitButton.textContent;
+            submitButton.disabled = true;
+            submitButton.textContent = 'Envoi...';
+            
+            // Récupérer les données du formulaire
+            const formData = new FormData(emailForm);
+            
+            // Envoyer la requête AJAX
+            fetch('PHPMailer/contact.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Erreur réseau');
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Réactiver le bouton
+                submitButton.disabled = false;
+                submitButton.textContent = originalButtonText;
+                
+                // Si succès
+                if (data.success) {
+                    // Réinitialiser le formulaire
+                    emailForm.reset();
+                    
+                    // Afficher le toast de succès
+                    showToast('Message envoyé avec succès !', true);
+                    
+                    // Fermer le formulaire après un court délai
+                    setTimeout(() => {
+                        closeEmailPage();
+                    }, 500);
+                } else {
+                    // Afficher le toast d'erreur
+                    showToast(data.message || 'Une erreur est survenue.', false);
+                }
+            })
+            .catch(error => {
+                // Réactiver le bouton
+                submitButton.disabled = false;
+                submitButton.textContent = originalButtonText;
+                
+                // Afficher une erreur
+                showToast('Une erreur est survenue. Veuillez réessayer.', false);
+                console.error('Erreur:', error);
+            });
+            
+            return false;
+        });
+    }
+});

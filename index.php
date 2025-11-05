@@ -126,50 +126,6 @@
             </div>
         </div>
         <!-- Système de page Email -->
-    <?php
-
-    if ($_SERVER["REQUEST_METHOD"] === "POST") {
-        $name = ($_REQUEST['name']);
-        $email = ($_REQUEST['email']);
-        $message = ($_REQUEST['message']);
-        $errors = 0;
-
-        if (strlen($name) < 2) {
-            $errors++;
-            echo '<script language="javascript">';
-            echo 'alert("Le nom doit contenir au moins 2 caractères.")';
-            echo '</script>';
-        }
-
-        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            echo json_encode(['success' => false, 'message' => 'L\'adresse email est invalide.']);
-            $errors++;
-        }
-
-        if (strlen($message) < 10) {
-            echo json_encode(['success' => false, 'message' => 'Le message doit contenir au moins 10 caractères.']);
-            $errors++;
-        }
-
-        if ($errors === 0) {
-            
-            $to = "lucasgodeboutcontact@gmail.com";
-            $subject = "Nouveau message de votre portfolio";
-            $body = "Nom: $name\nEmail: $email\nMessage:\n$message";
-            $headers = "From: $email";
-
-            if (mail($to, $subject, $body, $headers)) {
-                echo json_encode(['success' => true, 'message' => 'Merci pour votre message ! Je vous répondrai dès que possible.']);
-            } else {
-                echo json_encode(['success' => false, 'message' => 'Désolé, une erreur est survenue. Veuillez réessayer plus tard.']);
-            }
-
-        }
-        unset($name);
-        unset($email);
-        unset($message);
-    }
-    ?>
         <div class="email-overlay" id="email-overlay">
             <div class="email-page" id="email-page">
                 <div class="email-header">
@@ -185,13 +141,13 @@
                                     <p class="email-fullname">Lucas Godebout</p>
                                 </div>
                             </div>
-                            <form class="email-form" id="email-form" method="POST">
+                            <form class="email-form" id="email-form" method="POST" action="javascript:void(0);">
                                 <label for="name" class="email-label">Nom:</label>
-                                <input class="email-input" type="text" name="name" required>
+                                <input class="email-input" type="text" id="name" name="name" required>
                                 <label for="email" class="email-label">Email:</label>
-                                <input class="email-input" type="email" name="email" required>
+                                <input class="email-input" type="email" id="email" name="email" required>
                                 <label for="message" class="email-label">Message:</label>
-                                <textarea class="email-textarea" name="message" required></textarea>
+                                <textarea class="email-textarea" id="message" name="message" required></textarea>
                                 <button class="email-submit" type="submit">Envoyer</button>
                             </form>
                 </div>
@@ -202,10 +158,3 @@
     <script src="modal.js"></script>
 </body>
 </html>
-    <script type="text/javascript">
-        $('#contactForm').submit(function () {
-            $.post("mailer.php", $("#contactForm").serialize(), function (data) {
-            });
-            return false;
-        });
-    </script>
