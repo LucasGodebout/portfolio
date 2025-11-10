@@ -1,6 +1,8 @@
 // Configuration des pages modales
 const modalPages = {
     'my-and-community-page': {
+        dataName: 'My-and-community',
+        class: 'MAC',
         logo: 'images/projets/Logo_MYco_noir.svg',
         title: 'My and Community',
         description: `My and Community est une entreprise de création de sites web sur mesure et responsive, des sites vitrines, sites de e-commerce, ou encore des applications mobiles, le tout administrable via un back office commun à tous ses clients. Dans mon cas, j'ai participé à la création d'une application sur mesure pour Campers Van Rouen, une entreprise de réparation et d'entretien de véhicules de loisir. L'application contient un système d'état des lieux permettant de voir les photos des réparations des différents dossiers en cours et de modifier certaines informations lorsque le fichier n'est pas clos. Grâce à cette application, Campers Van Rouen ne pourra plus se faire arnaquer par des clients qui  se plaignent d'une dégradation du véhicule après réparation alors qu'elle a été notifiée lors de l'état des lieux. De plus, les dossiers sont disponibles sur un back-office permettant de voir les dossiers depuis chez soi.`,
@@ -8,8 +10,11 @@ const modalPages = {
         logiciels: ['images/tech/HTML.svg', 'images/tech/CSS.svg', 'images/tech/PHP.svg', 'images/tech/JS.svg', 'images/tech/SQL.svg', 'images/tech/QT.svg'],
         backgroundColor: 'hsla(191, 62%, 61%, 1)',
         textColor: '#ffffff',
+        dateFin: '2025-06-17',
     },
     'bds-win-angers-page': {
+        dataName: 'Bureau-des-Sports-Angers',
+        class: 'BDS',
         logo: 'images/projets/logo_BDS_WIN_ANGERS.svg',
         title: 'Bureau des Sports Angers',
         description: `Le Bureau des Sports de WIN Sport School Angers est une association étudiante créée par l'école de management et du sport d'Angers. Il a pour mission d’animer la vie sportive et de proposer diverses activités autour du sport à tous les étudiants, surtout ceux des Écoles Supérieur des Pays de la Loire. La but de ce projet était de réaliser un site possédant une page d'accueil, un calendrier des matchs ou des évènements à venir, les derniers résultats sportif et un espace étudiant avec un formulaire d'inscription/de connexion.`,
@@ -17,7 +22,21 @@ const modalPages = {
         logiciels: ['images/tech/HTML.svg', 'images/tech/CSS.svg', 'images/tech/PHP.svg', 'images/tech/JS.svg'],
         backgroundColor: 'hsla(234, 96%, 80%, 1.00)',
         textColor: '#ffffff',
+        dateFin: '2025-03-28',
     },
+    'dans-les-bras-d-antoine-page': {
+        dataName: 'Dans-les-bras-d-Antoine',
+        class: 'DLBA',
+        logo: 'images/projets/Logo_Antoine.svg',
+        title: 'Dans les bras d\'Antoine',
+        description: `Dans les bras d'Antoine est une association qui lutte contre les cancers pédiatriques suite au décès d'Antoine à 15 ans. Elle a pour but de récolter des fonds pour la recherche contre ce type de cancer. Ce projet a été réalisé lors d'un cours nommé "Digital Sans Frontière" où chaque groupe doit créer un site internet et faire la communication au profit d'une association.`,
+        project: 'PROJET RÉEL',
+        logiciels: ['images/tech/WordPress.svg', 'images/tech/Figma.svg'],
+        backgroundColor: 'hsla(24, 27%, 88%, 1)',
+        textColor: '#ffffff',
+        dateFin: '2025-03-07',
+    },
+
     // Ajoutez d'autres pages ici avec leurs configurations
 };
 
@@ -30,11 +49,73 @@ const modalProject = document.getElementById('modal-project');
 const modalDescription = document.getElementById('modal-description');
 const modalClose = document.getElementById('modal-close');
 const modalSoftware = document.getElementById('modal-software');
+const projectsFirstPage = document.getElementById('project-first-page');
 
 // Nouveaux éléments pour la page email
 const emailOverlay = document.getElementById('email-overlay');
 const emailClose = document.getElementById('email-close');
 const emailPage = document.getElementById('email-page');
+
+// Fonction pour créer les articles des projets
+function createProjectArticle() {
+    if (projectsFirstPage) {
+        projectsFirstPage.innerHTML = ''; // Vider le conteneur avant de le remplir
+        Object.entries(modalPages).forEach(([pageId, pageConfig]) => {
+            const article = document.createElement('article');
+            article.dataset.channelName = pageConfig.dataName;
+            article.dataset.channelShow = pageId;
+            article.className = 'project ' + pageConfig.class;
+            const articleImage = document.createElement('img');
+            articleImage.src = pageConfig.logo;
+            articleImage.alt = `Logo de ${pageConfig.dataName}`;
+            article.appendChild(articleImage);
+            projectsFirstPage.appendChild(article);
+        });
+        do {
+            const emptyArticle = document.createElement('article');
+            emptyArticle.className = 'project';
+            projectsFirstPage.appendChild(emptyArticle);
+        } while (projectsFirstPage.childElementCount < 15);
+        sortProjectsByEndDate();
+    }
+}
+
+// Fonction pour trier par date de fin les projets
+function sortProjectsByEndDate() {
+    if (!projectsFirstPage) return;
+
+    const articles = Array.from(projectsFirstPage.querySelectorAll('article'));
+
+    // Séparer les articles ayant une date valide et les autres
+    const withDates = [];
+    const withoutDates = [];
+
+    articles.forEach(article => {
+        const pageId = article.dataset.channelShow;
+        const pageConfig = pageId ? modalPages[pageId] : null;
+        const dateStr = pageConfig ? pageConfig.dateFin : null;
+
+        if (!dateStr) {
+            withoutDates.push(article);
+            return;
+        }
+
+        const date = new Date(dateStr);
+        if (isNaN(date.getTime())) {
+            withoutDates.push(article);
+            return;
+        }
+
+        withDates.push({ article, date });
+    });
+
+    // Trier du plus récent (date la plus grande) au plus ancien
+    withDates.sort((a, b) => b.date - a.date);
+
+    // Réordonner les éléments dans le DOM : d'abord les projets avec date triés, puis les autres
+    withDates.forEach(item => projectsFirstPage.appendChild(item.article));
+    withoutDates.forEach(article => projectsFirstPage.appendChild(article));
+}
 
 // Fonction pour ouvrir une page modale
 function openModalPage(pageId) {
@@ -65,9 +146,9 @@ function openModalPage(pageId) {
     if (modalSoftware) {
         modalSoftware.innerHTML = ''; // Vider le contenu précédent
         if (pageConfig.logiciels && pageConfig.logiciels.length > 0) {
-            const softwareTitle = document.createElement('h1');
+            const softwareTitle = document.createElement('h2');
             softwareTitle.className = 'modal-container-title';
-            softwareTitle.textContent = 'Logiciel utilisé :';
+            softwareTitle.textContent = 'Logiciels utilisés :';
             modalSoftware.appendChild(softwareTitle);
             const listItems = document.createElement('div');
             listItems.className = 'modal-software-list';
@@ -215,7 +296,6 @@ function showToast(message, isSuccess) {
     }, 3000);
 }
 
-// Gestionnaire pour le formulaire de contact
 document.addEventListener('DOMContentLoaded', function () {
     const emailForm = document.getElementById('email-form');
     
@@ -279,4 +359,9 @@ document.addEventListener('DOMContentLoaded', function () {
             return false;
         });
     }
+});
+
+// Initialisation
+document.addEventListener('DOMContentLoaded', function () {
+    createProjectArticle();
 });

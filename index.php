@@ -120,6 +120,8 @@
                         <div class="modal-software" id="modal-software">
                         </div>
                         <div class="modal-project-content" id="modal-project-content">
+                            <h2 class="modal-content-title" id="modal-content-title">Contenu du projet</h2>
+                            <video class="modal-content-video" id="modal-content-video" src=""></video>
                         </div>
                     </div>
                 </div>
@@ -134,22 +136,22 @@
                     <button class="modal-close" id="email-close">&times;</button>
                 </div>
                 <div class="email-content" id="email-content">
-                            <div class="email-online">
-                                <img class="email-online-icon" src="images/hi.png" alt="En ligne">
-                                <div class="email-name">
-                                    <p>Lucas</p>
-                                    <p class="email-fullname">Lucas Godebout</p>
-                                </div>
-                            </div>
-                            <form class="email-form" id="email-form" method="POST" action="javascript:void(0);">
-                                <label for="name" class="email-label">Nom:</label>
-                                <input class="email-input" type="text" id="name" name="name" required>
-                                <label for="email" class="email-label">Email:</label>
-                                <input class="email-input" type="email" id="email" name="email" required>
-                                <label for="message" class="email-label">Message:</label>
-                                <textarea class="email-textarea" id="message" name="message" required></textarea>
-                                <button class="email-submit" type="submit">Envoyer</button>
-                            </form>
+                    <div class="email-online">
+                        <img class="email-online-icon" src="images/hi.png" alt="En ligne">
+                        <div class="email-name">
+                            <p>Lucas</p>
+                            <p class="email-fullname">Lucas Godebout</p>
+                        </div>
+                    </div>
+                    <form class="email-form" id="email-form" method="POST" action="javascript:void(0);">
+                        <label for="name" class="email-label">Nom:</label>
+                        <input class="email-input" type="text" id="name" name="name" required>
+                        <label for="email" class="email-label">Email:</label>
+                        <input class="email-input" type="email" id="email" name="email" required>
+                        <label for="message" class="email-label">Message:</label>
+                        <textarea class="email-textarea" id="message" name="message" required></textarea>
+                        <button class="email-submit" type="submit">Envoyer</button>
+                    </form>
                 </div>
             </div>
         </div>

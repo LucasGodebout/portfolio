@@ -1,6 +1,6 @@
 // Création du background
 const background = {
-    videoSrc: '/video/bg.mp4',
+    videoSrc: 'bg.mp4',
     videoElement: null,
 
     createVideoElement() {
