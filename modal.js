@@ -36,6 +36,30 @@ const modalPages = {
         textColor: '#ffffff',
         dateFin: '2025-03-07',
     },
+    'imc-page':{
+        dataName: 'IMC',
+        class: 'IMC',
+        logo: 'images/projets/Logo_IMC.svg',
+        title: 'Calculateur d\'IMC',
+        description: `Ce projet est un calculateur d'IMC (Indice de Masse Corporelle) développé en PHP. L'utilisateur peut entrer son poids et sa taille, et le programme calcule son IMC en utilisant la formule standard. En fonction de la valeur calculée, le programme affiche une catégorie de poids correspondante, allant de "Insuffisance pondérale" à "Obésité sévère". Tous les résultats sont enregistrés dans un fichier texte et affichés sur le site.`,
+        project: 'PROJET NON RÉEL',
+        logiciels: ['images/tech/HTML.svg', 'images/tech/CSS.svg', 'images/tech/PHP.svg'],
+        backgroundColor: 'hsla(150, 50%, 70%, 1)',
+        textColor: '#ffffff',
+        dateFin: '2025-03-10',
+    },
+    'quizz-page':{
+        dataName: 'Quizz',
+        class: 'QUIZZ',
+        logo: 'images/projets/Logo_Quizz.svg',
+        title: 'Quizz',
+        description: `Ce projet est un quizz interactif développé en JavaScript. Il présente une série de questions à choix multiples, permettant aux utilisateurs de tester leurs connaissances sur divers sujets. Le quizz suit les réponses de l'utilisateur, calcule le score final et affiche les résultats à la fin. Le design est simple et épuré, offrant une expérience utilisateur agréable.`,
+        project: 'PROJET NON RÉEL',
+        logiciels: ['images/tech/HTML.svg', 'images/tech/CSS.svg', 'images/tech/JS.svg'],
+        backgroundColor: 'hsla(210, 100%, 71%, 1.00)',
+        textColor: '#ffffff',
+        dateFin: '2025-03-12',
+    },
 
     // Ajoutez d'autres pages ici avec leurs configurations
 };
