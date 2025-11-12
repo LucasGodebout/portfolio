@@ -7,7 +7,7 @@ const modalPages = {
         title: 'My and Community',
         description: `My and Community est une entreprise de création de sites web sur mesure et responsive, des sites vitrines, sites de e-commerce, ou encore des applications mobiles, le tout administrable via un back office commun à tous ses clients. Dans mon cas, j'ai participé à la création d'une application sur mesure pour Campers Van Rouen, une entreprise de réparation et d'entretien de véhicules de loisir. L'application contient un système d'état des lieux permettant de voir les photos des réparations des différents dossiers en cours et de modifier certaines informations lorsque le fichier n'est pas clos. Grâce à cette application, Campers Van Rouen ne pourra plus se faire arnaquer par des clients qui  se plaignent d'une dégradation du véhicule après réparation alors qu'elle a été notifiée lors de l'état des lieux. De plus, les dossiers sont disponibles sur un back-office permettant de voir les dossiers depuis chez soi.`,
         project: 'PROJET RÉEL',
-        logiciels: ['images/tech/HTML.svg', 'images/tech/CSS.svg', 'images/tech/PHP.svg', 'images/tech/JS.svg', 'images/tech/SQL.svg', 'images/tech/QT.svg'],
+        logiciels: ['images/tech/HTML.svg', 'images/tech/CSS.svg', 'images/tech/PHP.svg', 'images/tech/JS.svg', 'images/tech/SQL.svg', 'images/tech/QT.svg', 'images/tech/Figma.svg'],
         backgroundColor: 'hsla(191, 62%, 61%, 1)',
         textColor: '#ffffff',
         dateFin: '2025-06-17',
@@ -19,7 +19,7 @@ const modalPages = {
         title: 'Bureau des Sports Angers',
         description: `Le Bureau des Sports de WIN Sport School Angers est une association étudiante créée par l'école de management et du sport d'Angers. Il a pour mission d’animer la vie sportive et de proposer diverses activités autour du sport à tous les étudiants, surtout ceux des Écoles Supérieur des Pays de la Loire. La but de ce projet était de réaliser un site possédant une page d'accueil, un calendrier des matchs ou des évènements à venir, les derniers résultats sportif et un espace étudiant avec un formulaire d'inscription/de connexion.`,
         project: 'PROJET NON RÉEL',
-        logiciels: ['images/tech/HTML.svg', 'images/tech/CSS.svg', 'images/tech/PHP.svg', 'images/tech/JS.svg'],
+        logiciels: ['images/tech/HTML.svg', 'images/tech/CSS.svg', 'images/tech/PHP.svg', 'images/tech/JS.svg', 'images/tech/Figma.svg'],
         backgroundColor: 'hsla(234, 96%, 80%, 1.00)',
         textColor: '#ffffff',
         dateFin: '2025-03-28',
@@ -56,7 +56,7 @@ const modalPages = {
         description: `Ce projet est un quizz interactif développé en JavaScript. Il présente une série de questions à choix multiples, permettant aux utilisateurs de tester leurs connaissances sur divers sujets. Le quizz suit les réponses de l'utilisateur, calcule le score final et affiche les résultats à la fin. Le design est simple et épuré, offrant une expérience utilisateur agréable.`,
         project: 'PROJET NON RÉEL',
         logiciels: ['images/tech/HTML.svg', 'images/tech/CSS.svg', 'images/tech/JS.svg'],
-        backgroundColor: 'hsla(210, 100%, 71%, 1.00)',
+        backgroundColor: 'hsla(140, 43.7%, 72.2%, 1.00)',
         textColor: '#ffffff',
         dateFin: '2025-03-12',
     },
@@ -195,8 +195,8 @@ function openModalPage(pageId) {
         modalProject.classList.add('reel');
     } else if (pageConfig.project === 'PROJET NON RÉEL') {
         modalProject.classList.add('noreel');
-    } else {
-        modalProject.classList.add('undetermined');
+    } else if (pageConfig.project === 'BÉNÉVOLAT') {
+        modalProject.classList.add('benevole');
     }
 }
 
