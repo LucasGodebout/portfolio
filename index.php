@@ -82,25 +82,6 @@
         <div id="projects-container">
             <div id="projects">
                 <div id="project-first-page">
-                    <article data-name-channel="My-and-community" data-channel-show="my-and-community-page" class="project MAC">
-                        <img src="images/projets/Logo_MYco_noir.svg" alt="My and Community">
-                    </article>
-                    <article data-name-channel="Bureau-des-Sports-Angers" data-channel-show="bds-win-angers-page" class="project BDS">
-                        <img src="images/projets/logo_BDS_WIN_ANGERS.svg" alt="Bureau des Sports Angers">
-                    </article>
-                    <article class="project"></article>
-                    <article class="project"></article>
-                    <article class="project"></article>
-                    <article class="project"></article>
-                    <article class="project"></article>
-                    <article class="project"></article>
-                    <article class="project"></article>
-                    <article class="project"></article>
-                    <article class="project"></article>
-                    <article class="project"></article>
-                    <article class="project"></article>
-                    <article class="project"></article>
-                    <article class="project"></article>
                 </div>
             </div>
         </div>

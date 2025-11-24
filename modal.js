@@ -11,6 +11,7 @@ const modalPages = {
         backgroundColor: 'hsla(191, 62%, 61%, 1)',
         textColor: '#ffffff',
         dateFin: '2025-06-17',
+        video: '',
     },
     'bds-win-angers-page': {
         dataName: 'Bureau-des-Sports-Angers',
@@ -23,18 +24,20 @@ const modalPages = {
         backgroundColor: 'hsla(234, 96%, 80%, 1.00)',
         textColor: '#ffffff',
         dateFin: '2025-03-28',
+        video: '',
     },
     'dans-les-bras-d-antoine-page': {
         dataName: 'Dans-les-bras-d-Antoine',
         class: 'DLBA',
         logo: 'images/projets/Logo_Antoine.svg',
         title: 'Dans les bras d\'Antoine',
-        description: `Dans les bras d'Antoine est une association qui lutte contre les cancers pédiatriques suite au décès d'Antoine à 15 ans. Elle a pour but de récolter des fonds pour la recherche contre ce type de cancer. Ce projet a été réalisé lors d'un cours nommé "Digital Sans Frontière" où chaque groupe doit créer un site internet et faire la communication au profit d'une association.`,
+        description: `Dans les bras d'Antoine est une association qui lutte contre les cancers pédiatriques suite au décès d'Antoine à 15 ans. Elle a pour but de récolter des fonds pour la recherche contre ce type de cancer. Ce projet a été réalisé lors d'un cours nommé "Digital Sans Frontière" où chaque groupe doit créer un site internet et réaliser la communication au profit d'une association.`,
         project: 'PROJET RÉEL',
         logiciels: ['images/tech/WordPress.svg', 'images/tech/Figma.svg'],
         backgroundColor: 'hsla(24, 27%, 88%, 1)',
         textColor: '#ffffff',
         dateFin: '2025-03-07',
+        video: '',
     },
     'imc-page':{
         dataName: 'IMC',
@@ -46,7 +49,8 @@ const modalPages = {
         logiciels: ['images/tech/HTML.svg', 'images/tech/CSS.svg', 'images/tech/PHP.svg'],
         backgroundColor: 'hsla(150, 50%, 70%, 1)',
         textColor: '#ffffff',
-        dateFin: '2025-03-10',
+        dateFin: '2025-03-11',
+        video: '',
     },
     'quizz-page':{
         dataName: 'Quizz',
@@ -58,7 +62,21 @@ const modalPages = {
         logiciels: ['images/tech/HTML.svg', 'images/tech/CSS.svg', 'images/tech/JS.svg'],
         backgroundColor: 'hsla(140, 43.7%, 72.2%, 1.00)',
         textColor: '#ffffff',
-        dateFin: '2025-03-12',
+        dateFin: '2025-03-14',
+        video: '',
+    },
+    'smart-drive-page':{
+        dataName: 'Smart Drive',
+        class: 'SD',
+        logo: '/images/projets/logo_SD_rouge.svg',
+        title: 'Smart Drive',
+        description: `Smart Drive est un projet proposant un service de transport autonome, conçu pour des déplacements rapides, écologiques et confortables. Similaire aux taxis mais sans chauffeur, il cible une clientèle aisée de 20 à 60 ans en quête d'une expérience de voyage unique et innovante. Ce projet a été réalisé lors de mon premier partiel en groupe de 3. Je me suis donc occupé du site internet.`,
+        project: 'PROJET NON RÉEL',
+        logiciels: ['/images/tech/HTML.svg','/images/tech/CSS.svg','/images/tech/JS.svg','/images/tech/GIT.svg'],
+        backgroundColor: 'hsla(359, 72%, 37%, 1)',
+        textColor:'#fff',
+        dateFin: '2024-12-20',
+        video: '',
     },
 
     // Ajoutez d'autres pages ici avec leurs configurations
@@ -73,6 +91,7 @@ const modalProject = document.getElementById('modal-project');
 const modalDescription = document.getElementById('modal-description');
 const modalClose = document.getElementById('modal-close');
 const modalSoftware = document.getElementById('modal-software');
+const modalVideo = document.getElementById('modal-content-video');
 const projectsFirstPage = document.getElementById('project-first-page');
 
 // Nouveaux éléments pour la page email
@@ -155,6 +174,7 @@ function openModalPage(pageId) {
     modalLogo.src = pageConfig.logo;
     modalProject.textContent = pageConfig.project;
     modalDescription.textContent = pageConfig.description;
+    modalVideo.src = pageConfig.video;
 
     // Appliquer les styles spécifiques
     modalPage.style.background = pageConfig.backgroundColor;
