@@ -90,18 +90,18 @@
             <div class="modal-page" id="modal-page">
                 <button class="modal-close" id="modal-close">&times;</button>
                 <div class="modal-content" id="modal-content">
-                    <a class="modal-github"><img class="modal-logo" id="modal-logo" src="" alt="Project Logo"></a>
-                    <h1 class="modal-title" id="modal-title"></h1>
-                    <h2 class="modal-project" id="modal-project"></h2>
+                    <a id="modal-github"><img class="modal-logo" id="modal-logo" src="" alt="Project Logo"></a>
+                    <h2 class="modal-title" id="modal-title"></h2>
+                    <h3 class="modal-project" id="modal-project"></h3>
                     <div class="modal-description-container" id="modal-description-container">
-                        <h1 class="modal-container-title" id="modal-container-title">Description</h1>
+                        <h3 class="modal-container-title" id="modal-container-title">Description</h3>
                         <p class="modal-description" id="modal-description"></p>
                     </div>
                     <div class="modal-software-container" id="modal-software-container">
                         <div class="modal-software" id="modal-software">
                         </div>
                         <div class="modal-project-content" id="modal-project-content">
-                            <h2 class="modal-content-title" id="modal-content-title">Contenu du projet</h2>
+                            <h3 class="modal-content-title" id="modal-content-title">Contenu du projet</h3>
                             <video class="modal-content-video" id="modal-content-video" src=""></video>
                         </div>
                     </div>
@@ -113,7 +113,7 @@
             <div class="email-page" id="email-page">
                 <div class="email-header">
                     <img class="email-icon" src="images/icons/emailW.svg" alt="Email Icon" class="email-logo">
-                    <h1 class="email-title">Contactez-moi</h1>
+                    <h2 class="email-title">Contactez-moi</h2>
                     <button class="modal-close" id="email-close">&times;</button>
                 </div>
                 <div class="email-content" id="email-content">
@@ -137,21 +137,30 @@
             </div>
         </div>
         <!-- Système de la page des Mentions Légales -->
-         <div class="legal-overlay" id="legal-overlay">
+        <div class="legal-overlay" id="legal-overlay">
             <div class="legal-page" id="legal-page">
                 <div class="legal-header"> 
-                    <h1 class="legal-title">Mentions Légales</h1>
-                    <button class="modal-close" id="legal-close">&times;</button>
+                    <h2 class="legal-title">Code Erreur : Mentions Légales</h2>
                 </div>
                 <div class="legal-content" id="legal-content">
-                    <h2>Éditeur du site</h2>
-                    <p>Conformément aux dispositions de la loi n° 2004-575 du 21 juin 2004 pour la confiance en l'économie numérique, il est précisé aux utilisateurs du site Lucas Godebout - Portfolio l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi.</p>
-                    <h2>Hébergement</h2>
+                    <h3>Éditeur du site</h3>
+                    <p>Conformément aux dispositions de la loi n° 2004-575 du 21 juin 2004 pour la confiance en l'économie numérique, il est précisé aux utilisateurs du site   Portfolio l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi.</p>
+                    <h3>Hébergement</h3>
                     <p>Le site est hébergé par la société Coolify, dont le siège social est situé à 2, rue Kellermann, 59100 Roubaix</p>
-
-
-
-         </div>
+                    <h3>Directeur de publication</h3>
+                    <p>Le Directeur de la publication du site est Lucas Godebout.</p>
+                    <h3>Propriété intellectuelle</h3>
+                    <p>L'idée originale du site vient de la console Wii U de Nintendo. Tous les contenus présents sur ce site, incluant, de façon non limitative, les graphismes, images, textes, vidéos, animations, sons, logos, gifs et icônes ainsi que leur mise en forme sont la propriété exclusive de Lucas Godebout à l'exception des marques, logos ou contenus appartenant à d'autres entreprises ou auteurs.</p>
+                    <h3> Nous contacter</h3>
+                    <p>Par téléphone : +33650786508</br>
+                    Par email : lucasgodeboutcontact@gmail.com</br>
+                    Par courrier : 3681 Route de la Tuilaie</p>
+                </div>
+                <div class="legal-footer">
+                    <button class="legal-close" id="legal-close">OK</button>
+                </div>
+            </div>
+        </div>
     </main>
     <script src="loader.js"></script>
     <script src="modal.js"></script>

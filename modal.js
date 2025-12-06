@@ -40,6 +40,7 @@ const modalPages = {
         textColor: '#ffffff',
         dateFin: '2025-03-07',
         video: '',
+        github: '',
     },
     'imc-page':{
         dataName: 'IMC',
@@ -53,6 +54,7 @@ const modalPages = {
         textColor: '#ffffff',
         dateFin: '2025-03-11',
         video: '',
+        github: 'https://github.com/LucasGodebout/IMC',
     },
     'quizz-page':{
         dataName: 'Quizz',
@@ -65,7 +67,7 @@ const modalPages = {
         backgroundColor: 'hsla(140, 43.7%, 72.2%, 1.00)',
         textColor: '#ffffff',
         dateFin: '2025-03-14',
-        video: '',
+        video: 'https://github.com/LucasGodebout/Quizz',
     },
     'smart-drive-page':{
         dataName: 'Smart Drive',
@@ -79,6 +81,7 @@ const modalPages = {
         textColor:'#fff',
         dateFin: '2024-12-20',
         video: '',
+        github: 'https://github.com/LucasGodebout/Smart-Drive',
     },
 
     // Ajoutez d'autres pages ici avec leurs configurations
@@ -183,7 +186,9 @@ function openModalPage(pageId) {
     modalProject.textContent = pageConfig.project;
     modalDescription.textContent = pageConfig.description;
     modalVideo.src = pageConfig.video;
-    modalGithub.href = pageConfig.github;
+    if (modalGithub) {
+        modalGithub.setAttribute('href', pageConfig.github ? pageConfig.github : '#');
+    }
 
     // Appliquer les styles spécifiques
     modalPage.style.background = pageConfig.backgroundColor;
