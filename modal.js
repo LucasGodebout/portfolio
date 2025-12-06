@@ -12,6 +12,7 @@ const modalPages = {
         textColor: '#ffffff',
         dateFin: '2025-06-17',
         video: '',
+        github: '',
     },
     'bds-win-angers-page': {
         dataName: 'Bureau-des-Sports-Angers',
@@ -25,6 +26,7 @@ const modalPages = {
         textColor: '#ffffff',
         dateFin: '2025-03-28',
         video: '',
+        github: 'https://github.com/LucasGodebout/BDS-WIN-ANGERS',
     },
     'dans-les-bras-d-antoine-page': {
         dataName: 'Dans-les-bras-d-Antoine',
@@ -93,11 +95,17 @@ const modalClose = document.getElementById('modal-close');
 const modalSoftware = document.getElementById('modal-software');
 const modalVideo = document.getElementById('modal-content-video');
 const projectsFirstPage = document.getElementById('project-first-page');
+const modalGithub = document.getElementById('modal-github');
 
 // Nouveaux éléments pour la page email
 const emailOverlay = document.getElementById('email-overlay');
 const emailClose = document.getElementById('email-close');
 const emailPage = document.getElementById('email-page');
+
+// Élements de la page des Mentions Légales
+const legalOverlay = document.getElementById('legal-overlay');
+const legalClose = document.getElementById('legal-close');
+const legalPage = document.getElementById('legal-page');
 
 // Fonction pour créer les articles des projets
 function createProjectArticle() {
@@ -175,6 +183,7 @@ function openModalPage(pageId) {
     modalProject.textContent = pageConfig.project;
     modalDescription.textContent = pageConfig.description;
     modalVideo.src = pageConfig.video;
+    modalGithub.href = pageConfig.github;
 
     // Appliquer les styles spécifiques
     modalPage.style.background = pageConfig.backgroundColor;
@@ -316,30 +325,6 @@ function closeEmailPage() {
     }, 300); // Durée de l'animation
 }
 
-// Fonction pour afficher un toast
-function showToast(message, isSuccess) {
-    // Créer l'élément toast
-    const toast = document.createElement('div');
-    toast.className = `toast ${isSuccess ? 'toast-success' : 'toast-error'}`;
-    toast.textContent = message;
-    
-    // Ajouter au body
-    document.body.appendChild(toast);
-    
-    // Animation d'apparition
-    setTimeout(() => {
-        toast.classList.add('show');
-    }, 10);
-    
-    // Supprimer après 3 secondes
-    setTimeout(() => {
-        toast.classList.remove('show');
-        setTimeout(() => {
-            document.body.removeChild(toast);
-        }, 300);
-    }, 3000);
-}
-
 document.addEventListener('DOMContentLoaded', function () {
     const emailForm = document.getElementById('email-form');
     
@@ -404,6 +389,49 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+function openLegalPage() {
+    console.log('Ouverture de la page Mentions Légales');
+    // Afficher la page Mnentions Légales
+    legalOverlay.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+
+    // Fermer la page Mentions Légales en cliquant sur le bouton de fermeture
+    if (legalClose) {
+        legalClose.addEventListener('click', closeLegalPage);
+    }
+
+    // Fermer la page Mentions Légales en cliquant à l'extérieur
+    if (legalOverlay) {
+        legalOverlay.addEventListener('click', function(e) {
+            if (e.target === legalPage) {
+                closeLegalPage();
+            }
+        });
+    }
+    
+    // Fermer la page Mentions Légales avec la touche Échap
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && legalOverlay.style.display === 'flex') {
+            closeLegalPage();
+        }
+    });
+}
+
+// Fonction pour fermer la page Mentins Légales
+function closeLegalPage() {
+    // Ajouter la classe pour l'animation de fermeture
+    const legalPage = document.getElementById('legal-page');
+    legalPage.classList.add('closing');
+
+    // Attendre la fin de l'animation avant de cacher la modale
+    setTimeout(() => {
+        legalOverlay.style.display = 'none';
+        document.body.style.overflow = 'auto';
+        // Retirer la classe d'animation
+        legalPage.classList.remove('closing');
+    }, 300); // Durée de l'animation
+}
 
 // Initialisation
 document.addEventListener('DOMContentLoaded', function () {

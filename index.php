@@ -70,7 +70,7 @@
                     <a class="icon" id="icon-linkedin" href="https://www.linkedin.com/in/lucasgodebout" target="_blank">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#0091ff" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
                     </a>
-                    <a class="icon" onclick="openMentionsPage()">
+                    <a class="icon" onclick="openLegalPage()">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path fill="#74C0FC" d="M320 64C334.7 64 348.2 72.1 355.2 85L571.2 485C577.9 497.4 577.6 512.4 570.4 524.5C563.2 536.6 550.1 544 536 544L104 544C89.9 544 76.9 536.6 69.6 524.5C62.3 512.4 62.1 497.4 68.8 485L284.8 85C291.8 72.1 305.3 64 320 64zM320 232C306.7 232 296 242.7 296 256L296 368C296 381.3 306.7 392 320 392C333.3 392 344 381.3 344 368L344 256C344 242.7 333.3 232 320 232zM346.7 448C347.3 438.1 342.4 428.7 333.9 423.5C325.4 418.4 314.7 418.4 306.2 423.5C297.7 428.7 292.8 438.1 293.4 448C292.8 457.9 297.7 467.3 306.2 472.5C314.7 477.6 325.4 477.6 333.9 472.5C342.4 467.3 347.3 457.9 346.7 448z"/></svg>
                     </a>
                 </div>
@@ -90,7 +90,7 @@
             <div class="modal-page" id="modal-page">
                 <button class="modal-close" id="modal-close">&times;</button>
                 <div class="modal-content" id="modal-content">
-                    <img class="modal-logo" id="modal-logo" src="" alt="Project Logo">
+                    <a class="modal-github"><img class="modal-logo" id="modal-logo" src="" alt="Project Logo"></a>
                     <h1 class="modal-title" id="modal-title"></h1>
                     <h2 class="modal-project" id="modal-project"></h2>
                     <div class="modal-description-container" id="modal-description-container">
@@ -136,6 +136,22 @@
                 </div>
             </div>
         </div>
+        <!-- Système de la page des Mentions Légales -->
+         <div class="legal-overlay" id="legal-overlay">
+            <div class="legal-page" id="legal-page">
+                <div class="legal-header"> 
+                    <h1 class="legal-title">Mentions Légales</h1>
+                    <button class="modal-close" id="legal-close">&times;</button>
+                </div>
+                <div class="legal-content" id="legal-content">
+                    <h2>Éditeur du site</h2>
+                    <p>Conformément aux dispositions de la loi n° 2004-575 du 21 juin 2004 pour la confiance en l'économie numérique, il est précisé aux utilisateurs du site Lucas Godebout - Portfolio l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi.</p>
+                    <h2>Hébergement</h2>
+                    <p>Le site est hébergé par la société Coolify, dont le siège social est situé à 2, rue Kellermann, 59100 Roubaix</p>
+
+
+
+         </div>
     </main>
     <script src="loader.js"></script>
     <script src="modal.js"></script>
