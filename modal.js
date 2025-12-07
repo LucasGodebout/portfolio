@@ -10,7 +10,7 @@ const modalPages = {
         logiciels: ['images/tech/HTML.svg', 'images/tech/CSS.svg', 'images/tech/PHP.svg', 'images/tech/JS.svg', 'images/tech/SQL.svg', 'images/tech/QT.svg', 'images/tech/Figma.svg'],
         backgroundColor: 'hsla(191, 62%, 61%, 1)',
         textColor: '#ffffff',
-        dateFin: '2025-06-17',
+        dateDebut: '2025-04-31',
         video: '',
         github: '',
     },
@@ -24,7 +24,7 @@ const modalPages = {
         logiciels: ['images/tech/HTML.svg', 'images/tech/CSS.svg', 'images/tech/PHP.svg', 'images/tech/JS.svg', 'images/tech/Figma.svg'],
         backgroundColor: 'hsla(234, 96%, 80%, 1.00)',
         textColor: '#ffffff',
-        dateFin: '2025-03-28',
+        dateDebut: '2025-03-18',
         video: '',
         github: 'https://github.com/LucasGodebout/BDS-WIN-ANGERS',
     },
@@ -38,7 +38,7 @@ const modalPages = {
         logiciels: ['images/tech/WordPress.svg', 'images/tech/Figma.svg'],
         backgroundColor: 'hsla(24, 27%, 88%, 1)',
         textColor: '#ffffff',
-        dateFin: '2025-03-07',
+        dateDebut: '2025-03-03',
         video: '',
         github: '',
     },
@@ -50,9 +50,9 @@ const modalPages = {
         description: `Ce projet est un calculateur d'IMC (Indice de Masse Corporelle) développé en PHP. L'utilisateur peut entrer son poids et sa taille, et le programme calcule son IMC en utilisant la formule standard. En fonction de la valeur calculée, le programme affiche une catégorie de poids correspondante, allant de "Insuffisance pondérale" à "Obésité sévère". Tous les résultats sont enregistrés dans un fichier texte et affichés sur le site.`,
         project: 'PROJET NON RÉEL',
         logiciels: ['images/tech/HTML.svg', 'images/tech/CSS.svg', 'images/tech/PHP.svg'],
-        backgroundColor: 'hsla(150, 50%, 70%, 1)',
+        backgroundColor: 'hsla(207, 50%, 70%, 1.00)',
         textColor: '#ffffff',
-        dateFin: '2025-03-11',
+        dateDebut: '2025-01-21',
         video: '',
         github: 'https://github.com/LucasGodebout/IMC',
     },
@@ -66,7 +66,7 @@ const modalPages = {
         logiciels: ['images/tech/HTML.svg', 'images/tech/CSS.svg', 'images/tech/JS.svg'],
         backgroundColor: 'hsla(140, 43.7%, 72.2%, 1.00)',
         textColor: '#ffffff',
-        dateFin: '2025-03-14',
+        dateDebut: '2025-01-10',
         video: 'https://github.com/LucasGodebout/Quizz',
     },
     'smart-drive-page':{
@@ -79,12 +79,38 @@ const modalPages = {
         logiciels: ['/images/tech/HTML.svg','/images/tech/CSS.svg','/images/tech/JS.svg','/images/tech/GIT.svg'],
         backgroundColor: 'hsla(359, 72%, 37%, 1)',
         textColor:'#fff',
-        dateFin: '2024-12-20',
+        dateDebut: '2024-12-16',
         video: '',
         github: 'https://github.com/LucasGodebout/Smart-Drive',
     },
-
-    // Ajoutez d'autres pages ici avec leurs configurations
+    'lego-page':{
+        dataName: 'Lego',
+        class: 'LEGO',
+        logo: '/images/projets/logo_LEGO.svg',
+        title: 'Lego Store',
+        description: `Ce projet est une réplique simplifiée d'un site de e-commerce pour la marque Lego fait sur WordPress. L'objectif était d'apprendre à utiliser WordPress en premier lieu, puis j'ai ajouté le plugin WooCommerce pour obtenir un site d'e-commerce fonctionnel. `,
+        project: 'PROJET NON RÉEL',
+        logiciels: ['/images/tech/WordPress.svg','/images/tech/figma.svg'],
+        backgroundColor: 'hsla(54, 81%, 83%, 1.00)',
+        textColor:'#fff',
+        dateDebut: '2024-10-10',
+        video: '',
+        github: '',
+    },
+    'undertale-page':{
+        dataName: 'Undertale',
+        class: 'UNDERTALE',
+        logo: '/images/projets/logo_undertale.svg',
+        title: 'Undertale',
+        description: `Ce projet est une page web dédiée au jeu vidéo Undertale. L'objectif était de créer un site avec au minimum 3 pages dont une page d'accueil et une page de contact avec un formulaire.`,
+        project: 'PROJET NON RÉEL',
+        logiciels: ['/images/tech/HTML.svg','/images/tech/CSS.svg','/images/tech/JS.svg', '/images/tech/figma.svg'],
+        backgroundColor: 'hsla(199, 20%, 20%, 1.00)',
+        textColor:'#fff',
+        dateDebut: '2024-10-11',
+        video: '',
+        github: '',
+    },
 };
 
 // Éléments DOM
@@ -147,7 +173,7 @@ function sortProjectsByEndDate() {
     articles.forEach(article => {
         const pageId = article.dataset.channelShow;
         const pageConfig = pageId ? modalPages[pageId] : null;
-        const dateStr = pageConfig ? pageConfig.dateFin : null;
+        const dateStr = pageConfig ? pageConfig.dateDebut : null;
 
         if (!dateStr) {
             withoutDates.push(article);
