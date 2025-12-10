@@ -51,8 +51,8 @@
             <a id="logo" onclick="openCVPage()">
                 <img class="logo" src="images/lurk.png" alt="Lucas Godebout Logo">               
             </a>
-            <div id="menu-icons"> <!-- modifier en <nav> plus tard -->
-                <div id="menu"> <!-- Modifier en ul plus tard -->
+            <div id="menu-icons">
+                <div id="menu">
                     <div class="menu-item focus" id="menu-first-page"></div>
                     <div class="menu-item" id="menu-second-page"></div>
                     <div class="menu-item" id="menu-third-page"></div>
@@ -60,7 +60,7 @@
                     <div class="menu-item" id="menu-fifth-page"></div>
                     <div class="menu-item" id="menu-sixth-page"></div>
                 </div> 
-                <div id="icons"> <!-- Modifier en ul plus tard -->
+                <div id="icons">
                     <a class="icon" onclick="openEmailPage()">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#ff9500" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
                     </a>
@@ -79,14 +79,14 @@
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#ff9500" d="M64 64C28.7 64 0 92.7 0 128l0 256c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-256c0-35.3-28.7-64-64-64L64 64zM48 128c0-8.8 7.2-16 16-16l384 0c8.8 0 16 7.2 16 16l0 256c0 8.8-7.2 16-16 16L64 384c-8.8 0-16-7.2-16-16L48 128zM192.1 160c-6.2 .1-12.1 .9-17.6 2.4c-5.5 .9-10.6 .9-15 .9s-9.5-.1-14-.9c-5.5-1.5-11.4-2.3-17.6-2.4C113.4 160 .1 224 .1 224s113.3 63.9 113.3 63.9c6.2-.1 12.1-.9 17.6-2.4c5.5-.9 10.6-.9 15-.9s9.5 .1 14 .9c5.5 1.5 11.4 2.3 17.6 2.4C400 .1 .1 .1 .1 .1S113.4 .1 .1 .1s113.3 .1 .1 .1z"/></svg>
             </a>
         </div>
-        <div id="projects-container">
+        <section id="projects-container">
             <div id="projects">
                 <div id="project-first-page">
                 </div>
             </div>
-        </div>
+        </section>
         <!-- Système de pages modales -->
-        <div class="modal-overlay" id="modal-overlay">
+        <section class="modal-overlay" id="modal-overlay">
             <div class="modal-page" id="modal-page">
                 <button class="modal-close" id="modal-close">&times;</button>
                 <div class="modal-content" id="modal-content">
@@ -107,9 +107,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
         <!-- Système de page Email -->
-        <div class="email-overlay" id="email-overlay">
+        <section class="email-overlay" id="email-overlay">
             <div class="email-page" id="email-page">
                 <div class="email-header">
                     <img class="email-icon" src="images/icons/emailW.svg" alt="Email Icon" class="email-logo">
@@ -135,9 +135,9 @@
                     </form>
                 </div>
             </div>
-        </div>
+        </section>
         <!-- Système de la page des Mentions Légales -->
-        <div class="legal-overlay" id="legal-overlay">
+        <section class="legal-overlay" id="legal-overlay">
             <div class="legal-page" id="legal-page">
                 <div class="legal-header"> 
                     <h2 class="legal-title">Code Erreur : Mentions Légales</h2>
@@ -160,7 +160,7 @@
                     <button class="legal-close" id="legal-close">OK</button>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
     <script src="loader.js"></script>
     <script src="modal.js"></script>
