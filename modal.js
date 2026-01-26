@@ -20,7 +20,7 @@ const modalPages = {
         logo: 'images/projets/logo_BDS_WIN_ANGERS.svg',
         title: 'Bureau des Sports Angers',
         description: `Le Bureau des Sports de WIN Sport School Angers est une association étudiante créée par l'école de management et du sport d'Angers. Il a pour mission d’animer la vie sportive et de proposer diverses activités autour du sport à tous les étudiants, surtout ceux des Écoles Supérieur des Pays de la Loire. La but de ce projet était de réaliser un site possédant une page d'accueil, un calendrier des matchs ou des évènements à venir, les derniers résultats sportif et un espace étudiant avec un formulaire d'inscription/de connexion.`,
-        project: 'PROJET NON RÉEL',
+        project: 'PROJET ÉCOLE',
         logiciels: ['images/tech/HTML.svg', 'images/tech/CSS.svg', 'images/tech/PHP.svg', 'images/tech/JS.svg', 'images/tech/Figma.svg'],
         backgroundColor: 'hsla(234, 96%, 80%, 1.00)',
         textColor: '#ffffff',
@@ -48,7 +48,7 @@ const modalPages = {
         logo: 'images/projets/Logo_IMC.svg',
         title: 'Calculateur d\'IMC',
         description: `Ce projet est un calculateur d'IMC (Indice de Masse Corporelle) développé en PHP. L'utilisateur peut entrer son poids et sa taille, et le programme calcule son IMC en utilisant la formule standard. En fonction de la valeur calculée, le programme affiche une catégorie de poids correspondante, allant de "Insuffisance pondérale" à "Obésité sévère". Tous les résultats sont enregistrés dans un fichier texte et affichés sur le site.`,
-        project: 'PROJET NON RÉEL',
+        project: 'PROJET ÉCOLE',
         logiciels: ['images/tech/HTML.svg', 'images/tech/CSS.svg', 'images/tech/PHP.svg'],
         backgroundColor: 'hsla(207, 50%, 70%, 1.00)',
         textColor: '#ffffff',
@@ -62,7 +62,7 @@ const modalPages = {
         logo: 'images/projets/Logo_Quizz.svg',
         title: 'Quizz',
         description: `Ce projet est un quizz interactif développé en JavaScript. Il présente une série de questions à choix multiples, permettant aux utilisateurs de tester leurs connaissances sur divers sujets. Le quizz suit les réponses de l'utilisateur, calcule le score final et affiche les résultats à la fin. Le design est simple et épuré, offrant une expérience utilisateur agréable.`,
-        project: 'PROJET NON RÉEL',
+        project: 'PROJET ÉCOLE',
         logiciels: ['images/tech/HTML.svg', 'images/tech/CSS.svg', 'images/tech/JS.svg'],
         backgroundColor: 'hsla(140, 43.7%, 72.2%, 1.00)',
         textColor: '#ffffff',
@@ -75,7 +75,7 @@ const modalPages = {
         logo: 'images/projets/logo_SD_rouge.svg',
         title: 'Smart Drive',
         description: `Smart Drive est un projet proposant un service de transport autonome, conçu pour des déplacements rapides, écologiques et confortables. Similaire aux taxis mais sans chauffeur, il cible une clientèle aisée de 20 à 60 ans en quête d'une expérience de voyage unique et innovante. Ce projet a été réalisé lors de mon premier partiel en groupe de 3. Je me suis donc occupé du site internet.`,
-        project: 'PROJET NON RÉEL',
+        project: 'PROJET ÉCOLE',
         logiciels: ['images/tech/HTML.svg','images/tech/CSS.svg','images/tech/JS.svg','images/tech/GIT.svg'],
         backgroundColor: 'hsla(359, 72%, 37%, 1)',
         textColor:'#fff',
@@ -89,7 +89,7 @@ const modalPages = {
         logo: 'images/projets/logo_lego.svg',
         title: 'Lego Store',
         description: `Ce projet est une réplique simplifiée d'un site de e-commerce pour la marque Lego fait sur WordPress. L'objectif était d'apprendre à utiliser WordPress en premier lieu, puis j'ai ajouté le plugin WooCommerce pour obtenir un site d'e-commerce fonctionnel. `,
-        project: 'PROJET NON RÉEL',
+        project: 'PROJET ÉCOLE',
         logiciels: ['images/tech/WordPress.svg','images/tech/Figma.svg'],
         backgroundColor: 'hsla(54, 81%, 83%, 1.00)',
         textColor:'#fff',
@@ -103,7 +103,7 @@ const modalPages = {
         logo: 'images/projets/logo_undertale.svg',
         title: 'Undertale',
         description: `Ce projet est une page web dédiée au jeu vidéo Undertale. L'objectif était de créer un site avec au minimum 3 pages dont une page d'accueil et une page de contact avec un formulaire mais aussi de proposer une expérience fluide et responsive sur tous les supports.`,
-        project: 'PROJET NON RÉEL',
+        project: 'PROJET ÉCOLE',
         logiciels: ['images/tech/HTML.svg','images/tech/CSS.svg','images/tech/JS.svg', 'images/tech/Figma.svg'],
         backgroundColor: 'hsla(199, 20%, 20%, 1.00)',
         textColor:'#fff',
@@ -117,7 +117,7 @@ const modalPages = {
         logo: '/images/projets/logo_password_generator.svg',
         title: 'Password Generator',
         description: `Ce projet est un générateur de mots de passe sécurisé développé en JavaScript. Il permet aux utilisateurs de créer des mots de passe aléatoires en fonction de critères personnalisables tels que la longueur et les types de caractères (majuscules, minuscules, chiffres, symboles). Le générateur a été créé suite à un besoin personnel de créer des mots de passe sécurisés sans passer par des sites externes qui peuvent récupérer ces mots de passe.`,
-        project: 'PROJET NON RÉEL',
+        project: 'PROJET ÉCOLE',
         logiciels: ['images/tech/HTML.svg','images/tech/CSS.svg','images/tech/JS.svg'],
         backgroundColor: 'hsla(271, 76%, 53%, 1.00)',
         textColor:'#fff',
@@ -267,7 +267,7 @@ function openModalPage(pageId) {
     modalProject.classList.remove('reel', 'noreel', 'undetermined');
     if (pageConfig.project === 'PROJET RÉEL') {
         modalProject.classList.add('reel');
-    } else if (pageConfig.project === 'PROJET NON RÉEL') {
+    } else if (pageConfig.project === 'PROJET ÉCOLE') {
         modalProject.classList.add('noreel');
     } else if (pageConfig.project === 'BÉNÉVOLAT') {
         modalProject.classList.add('benevole');
@@ -302,6 +302,20 @@ document.addEventListener('DOMContentLoaded', function () {
         if (targetElement) {
             const pageId = targetElement.getAttribute('data-channel-show');
             openModalPage(pageId);
+        }
+    });
+
+    document.addEventListener('mouseover', function (e) {
+        const targetElement = e.target.closest('[data-channel-show]');
+        if (targetElement) {
+            const pageId = targetElement.getAttribute('data-channel-show');
+            const bubble = document.createElement('div');
+            bubble.className = 'project-bubble';
+            bubble.textContent = modalPages[pageId].title;
+            targetElement.appendChild(bubble);
+            targetElement.addEventListener('mouseleave', function() {
+                bubble.remove();
+            });
         }
     });
 

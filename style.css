@@ -302,7 +302,7 @@ p {
     font-size: 3em;
     font-weight: bold;
     margin-bottom: 30px;
-    color: #333;
+    color: #fff;
 }
 
 .modal-description {
@@ -686,6 +686,40 @@ p {
     font-size: 28px;
 }
 
+.project-bubble{
+    visibility: hidden;
+    width: 150px;
+    max-width: 200px;
+    background-color: #cccccc;
+    color: #000000;
+    text-align: center;
+    font-size: larger;
+    border-radius: 60px;
+    padding: 10px;
+    position: absolute;
+    z-index: 2;
+    top: 200px;
+    left: 5px;
+    margin-left: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.project-bubble::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 45%;
+    margin-left: -10px;
+    border-width: 20px;
+    border-style: solid;
+    border-color: transparent transparent #cccccc transparent;
+}
+
+.project:hover .project-bubble {
+    visibility: visible;
+    opacity: 1;
+}
 
 /* Couleurs spécifiques pour chaque page */
 #my-and-community-page .modal-page {
@@ -699,6 +733,9 @@ p {
 .LEGO img{
     width: 85%;
     border-radius: 0%;
+}
+.LEGO .modal-title{
+    color: #333;
 }
 
 @media (max-width: 768px) {
