@@ -114,7 +114,7 @@ const modalPages = {
     'Password-Generator-page':{
         dataName: 'Password Generator',
         class: 'PASSWORD-GENERATOR',
-        logo: '/images/projets/logo_password_generator.svg',
+        logo: 'images/projets/logo_PG.svg',
         title: 'Password Generator',
         description: `Ce projet est un générateur de mots de passe sécurisé développé en JavaScript. Il permet aux utilisateurs de créer des mots de passe aléatoires en fonction de critères personnalisables tels que la longueur et les types de caractères (majuscules, minuscules, chiffres, symboles). Le générateur a été créé suite à un besoin personnel de créer des mots de passe sécurisés sans passer par des sites externes qui peuvent récupérer ces mots de passe.`,
         project: 'PROJET ÉCOLE',

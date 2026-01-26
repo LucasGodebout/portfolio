@@ -732,12 +732,15 @@ p {
 
 .LEGO img{
     width: 85%;
-    border-radius: 0%;
 }
 .LEGO .modal-title{
     color: #333;
 }
 
+.PASSWORD-GENERATOR img{
+    width: 85%;
+    border-radius: 0%;
+}
 @media (max-width: 768px) {
     #icons{
         gap: 5rem;
