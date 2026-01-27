@@ -19,7 +19,7 @@ const modalPages = {
         class: 'BDS',
         logo: 'images/projets/logo_BDS_WIN_ANGERS.svg',
         title: 'Bureau des Sports Angers',
-        description: `Le Bureau des Sports de WIN Sport School Angers est une association étudiante créée par l'école de management et du sport d'Angers. Il a pour mission d’animer la vie sportive et de proposer diverses activités autour du sport à tous les étudiants, surtout ceux des Écoles Supérieur des Pays de la Loire. La but de ce projet était de réaliser un site possédant une page d'accueil, un calendrier des matchs ou des évènements à venir, les derniers résultats sportif et un espace étudiant avec un formulaire d'inscription/de connexion.`,
+        description: `Le Bureau des Sports de WIN Sport School Angers est une association étudiante créée par l'école de management et du sport d'Angers. Il a pour mission d’animer la vie sportive et de proposer diverses activités autour du sport à tous les étudiants, surtout ceux des Écoles Supérieur des Pays de la Loire. Le but de ce projet était de réaliser un site possédant une page d'accueil, un calendrier des matchs ou des évènements à venir, les derniers résultats sportif et un espace étudiant avec un formulaire d'inscription/de connexion sur Wordpress. Personnellement, j'ai préféré réaliser le site de A à Z en HTML, CSS, PHP et JavaScript afin d'avoir un contrôle total sur les fontionnalités du site, particulièrement sur la page du calendrier et les filtres des sports.`,
         project: 'PROJET ÉCOLE',
         logiciels: ['images/tech/HTML.svg', 'images/tech/CSS.svg', 'images/tech/PHP.svg', 'images/tech/JS.svg', 'images/tech/Figma.svg'],
         backgroundColor: 'hsla(234, 96%, 80%, 1.00)',
@@ -36,8 +36,8 @@ const modalPages = {
         description: `Dans les bras d'Antoine est une association qui lutte contre les cancers pédiatriques suite au décès d'Antoine à 15 ans. Elle a pour but de récolter des fonds pour la recherche contre ce type de cancer. Ce projet a été réalisé lors d'un cours nommé "Digital Sans Frontière" où chaque groupe doit créer un site internet et réaliser la communication au profit d'une association.`,
         project: 'PROJET RÉEL',
         logiciels: ['images/tech/WordPress.svg', 'images/tech/Figma.svg'],
-        backgroundColor: 'hsla(24, 27%, 88%, 1)',
-        textColor: '#ffffff',
+        backgroundColor: 'rgb(245, 221, 204)',
+        textColor: '#000',
         dateDebut: '2025-03-03',
         video: '',
         github: '',
@@ -91,8 +91,8 @@ const modalPages = {
         description: `Ce projet est une réplique simplifiée d'un site de e-commerce pour la marque Lego fait sur WordPress. L'objectif était d'apprendre à utiliser WordPress en premier lieu, puis j'ai ajouté le plugin WooCommerce pour obtenir un site d'e-commerce fonctionnel. `,
         project: 'PROJET ÉCOLE',
         logiciels: ['images/tech/WordPress.svg','images/tech/Figma.svg'],
-        backgroundColor: 'hsla(54, 81%, 83%, 1.00)',
-        textColor:'#fff',
+        backgroundColor: 'rgb(245, 233, 128)',
+        textColor:'#000',
         dateDebut: '2024-10-10',
         video: '',
         github: '',
@@ -102,7 +102,7 @@ const modalPages = {
         class: 'UNDERTALE',
         logo: 'images/projets/logo_undertale.svg',
         title: 'Undertale',
-        description: `Ce projet est une page web dédiée au jeu vidéo Undertale. L'objectif était de créer un site avec au minimum 3 pages dont une page d'accueil et une page de contact avec un formulaire mais aussi de proposer une expérience fluide et responsive sur tous les supports.`,
+        description: `Ce site est un projet web réalisé autour de l’univers du jeu Undertale créé par Toby Fox. Il s’agit d’un site vitrine dédié à l’exploration de l’histoire, des personnages emblématiques, des musiques et de l’esthétique unique du jeu, à travers un design immersif et une navigation simple. Ce projet a été réalisé dans le cadre d'un cours de développement web où l'objectif était de créer un site web statique en utilisant HTML et CSS. Le site devait posséder 3 pages distinctes : une page d'accueil, une autre page du style boutique, présentation et plus, et enfin une page contact.`,
         project: 'PROJET ÉCOLE',
         logiciels: ['images/tech/HTML.svg','images/tech/CSS.svg','images/tech/JS.svg', 'images/tech/Figma.svg'],
         backgroundColor: 'hsla(199, 20%, 20%, 1.00)',
@@ -119,7 +119,7 @@ const modalPages = {
         description: `Ce projet est un générateur de mots de passe sécurisé développé en JavaScript. Il permet aux utilisateurs de créer des mots de passe aléatoires en fonction de critères personnalisables tels que la longueur et les types de caractères (majuscules, minuscules, chiffres, symboles). Le générateur a été créé suite à un besoin personnel de créer des mots de passe sécurisés sans passer par des sites externes qui peuvent récupérer ces mots de passe.`,
         project: 'PROJET ÉCOLE',
         logiciels: ['images/tech/HTML.svg','images/tech/CSS.svg','images/tech/JS.svg'],
-        backgroundColor: 'hsla(271, 76%, 53%, 1.00)',
+        backgroundColor: 'lightseagreen',
         textColor:'#fff',
         dateDebut: '2025-09-20',
         video: '',
@@ -233,6 +233,7 @@ function openModalPage(pageId) {
     // Appliquer les styles spécifiques
     modalPage.style.background = pageConfig.backgroundColor;
     modalPage.id = pageId;
+    modalPage.style.color = pageConfig.textColor;
 
     // Afficher la modale
     modalOverlay.style.display = 'flex';

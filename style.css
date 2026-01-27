@@ -86,6 +86,12 @@ p {
     font-size: 1.5em;
     margin: 0;
 }
+.loader-loading {
+    font-size: 1.2em;
+    margin: 0;
+    margin-top: 10px;
+    font-style: italic;
+}
 #menu-icons {
     display: flex;
     flex-direction: column;
@@ -302,7 +308,6 @@ p {
     font-size: 3em;
     font-weight: bold;
     margin-bottom: 30px;
-    color: #fff;
 }
 
 .modal-description {
@@ -397,6 +402,13 @@ p {
     display: flex;
     flex-direction: column;
     height: 35%;
+}
+.modal-content-title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #0d0d0d;
 }
 
 .reel{
@@ -732,6 +744,8 @@ p {
 
 .LEGO img{
     width: 85%;
+    border-radius: 0%;
+
 }
 .LEGO .modal-title{
     color: #333;

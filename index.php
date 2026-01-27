@@ -43,6 +43,7 @@
             <div id="loader-text">
                 <p class="loader-title">Lucas Godebout</p>
                 <p class="loader-subtitle">Portfolio</p>
+                <p class="loader-loading">Chargement des projets...</p>
             </div>
         </div>
     </section>
@@ -151,10 +152,8 @@
                     <p>Le Directeur de la publication du site est Lucas Godebout.</p>
                     <h3>Propriété intellectuelle</h3>
                     <p>L'idée originale du site vient de la console Wii U de Nintendo. Tous les contenus présents sur ce site, incluant, de façon non limitative, les graphismes, images, textes, vidéos, animations, sons, logos, gifs et icônes ainsi que leur mise en forme sont la propriété exclusive de Lucas Godebout à l'exception des marques, logos ou contenus appartenant à d'autres entreprises ou auteurs.</p>
-                    <h3> Nous contacter</h3>
-                    <p>Par téléphone : +33650786508</br>
-                    Par email : lucasgodeboutcontact@gmail.com</br>
-                    Par courrier : 3681 Route de la Tuilaie</p>
+                    <h3> Me contacter</h3>
+                    <p>Via l'icone de l'enveloppe en orange sur la page d'accueil.</p>
                 </div>
                 <div class="legal-footer">
                     <button class="legal-close" id="legal-close">OK</button>
