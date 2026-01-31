@@ -38,7 +38,7 @@
     <section id="loader">
         <div id="loader-white-bg">
             <div id="loader-logo-container">
-                <img class="logo" src="images/hi.png" alt="Lucas Godebout Logo">
+                <img class="logo" src="images/icons/lurk.png" alt="Lucas Godebout Logo">
             </div>
             <div id="loader-text">
                 <p class="loader-title">Lucas Godebout</p>
@@ -50,7 +50,7 @@
     <main id="main-content">
         <div id="front-page">
             <a id="logo" onclick="openCVPage()">
-                <img class="logo" src="images/lurk.png" alt="Lucas Godebout Logo">               
+                <img class="logo" src="images/icons/lurk.png" alt="Lucas Godebout Logo">               
             </a>
             <div id="menu-icons">
                 <div id="menu">
@@ -120,7 +120,7 @@
                     </div>
                     <div class="email-content" id="email-content">
                         <div class="email-online">
-                            <img class="email-online-icon" src="images/hi.png" alt="En ligne">
+                            <img class="email-online-icon" src="images/icons/lurk.png" alt="En ligne">
                             <div class="email-name">
                                 <p>Lucas</p>
                                 <p class="email-fullname">Lucas Godebout</p>
