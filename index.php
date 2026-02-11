@@ -76,13 +76,18 @@
                     </a>
                 </div>
             </div>
-            <a id="change-page-right">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#ff9500" d="M64 64C28.7 64 0 92.7 0 128l0 256c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-256c0-35.3-28.7-64-64-64L64 64zM48 128c0-8.8 7.2-16 16-16l384 0c8.8 0 16 7.2 16 16l0 256c0 8.8-7.2 16-16 16L64 384c-8.8 0-16-7.2-16-16L48 128zM192.1 160c-6.2 .1-12.1 .9-17.6 2.4c-5.5 .9-10.6 .9-15 .9s-9.5-.1-14-.9c-5.5-1.5-11.4-2.3-17.6-2.4C113.4 160 .1 224 .1 224s113.3 63.9 113.3 63.9c6.2-.1 12.1-.9 17.6-2.4c5.5-.9 10.6-.9 15-.9s9.5 .1 14 .9c5.5 1.5 11.4 2.3 17.6 2.4C400 .1 .1 .1 .1 .1S113.4 .1 .1 .1s113.3 .1 .1 .1z"/></svg>
+            <a id="change-page-right" class="change-page" onclick="goToNextPage()">
+                <img src="images/icons/right-arrow.svg" alt="Flèche droite">
+            </a>
+            <a id="change-page-left" class="change-page" onclick="goToPreviousPage()">
+                <img src="images/icons/left-arrow.svg" alt="Flèche gauche">
             </a>
         </div>
         <section id="projects-container">
             <div id="projects">
                 <div id="project-first-page">
+                </div>
+                <div id="project-second-page">
                 </div>
             </div>
         </section>

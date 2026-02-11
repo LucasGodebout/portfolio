@@ -57,25 +57,25 @@ const animations = {
         const mainContent = document.getElementById('projects-container');
         if (mainContent) {
             mainContent.style.position = 'absolute';
-        mainContent.style.top = '100%';
-        mainContent.style.left = '50%';
-        mainContent.style.opacity = '0';
-        mainContent.style.width = '90rem';
-        mainContent.style.height = '100%';
-        mainContent.style.display = 'flex';
-        mainContent.style.flexDirection = 'column';
-        mainContent.style.justifyContent = 'center';
-        mainContent.style.alignItems = 'center';
-        void mainContent.offsetWidth;
-        setTimeout(() => {
-            mainContent.style.transition = 'top 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
-            mainContent.style.top = '0';
+            mainContent.style.top = '100%';
             mainContent.style.left = '50%';
-            mainContent.style.transform = 'translate(-50%, 0)';
-            mainContent.style.opacity = '1';
-        }, 100);
-    }
-},
+            mainContent.style.opacity = '0';
+            mainContent.style.width = '90rem';
+            mainContent.style.height = '100%';
+            mainContent.style.display = 'flex';
+            mainContent.style.flexDirection = 'column';
+            mainContent.style.justifyContent = 'center';
+            mainContent.style.alignItems = 'center';
+            void mainContent.offsetWidth;
+            setTimeout(() => {
+                mainContent.style.transition = 'top 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+                mainContent.style.top = '0';
+                mainContent.style.left = '50%';
+                mainContent.style.transform = 'translate(-50%, 0)';
+                mainContent.style.opacity = '1';
+            }, 100);
+        }
+    },
 
     // Fonction pour animer les icônes lors de l'affichage des éléments
     animationIcons() {
@@ -107,6 +107,38 @@ const animations = {
             setTimeout(() => {
                 menu.style.opacity = '1';
                 menu.style.transition = 'opacity 1.5s';
+            }, 100);
+        }
+    },
+
+    // Fonction pour animer les flèches de changement de page
+    animatePageArrows() {
+        const leftArrow = document.getElementById('change-page-left');
+        const rightArrow = document.getElementById('change-page-right');
+        if (leftArrow) {
+            leftArrow.style.position = 'fixed';
+            leftArrow.style.top = '50%';
+            leftArrow.style.left = '-50px';
+            leftArrow.style.transform = 'translateY(-50%)';
+            leftArrow.style.opacity = '0';
+            void leftArrow.offsetWidth;
+            setTimeout(() => {
+                leftArrow.style.opacity = '1';
+                leftArrow.style.left = '20px';
+                leftArrow.style.transition = 'opacity 0.6s, left 0.8s cubic-bezier(0.4,0,0.2,1)';
+            }, 100);
+        }
+        if (rightArrow) {
+            rightArrow.style.position = 'fixed';
+            rightArrow.style.top = '50%';
+            rightArrow.style.right = '-50px';
+            rightArrow.style.transform = 'translateY(-50%)';
+            rightArrow.style.opacity = '0';
+            void rightArrow.offsetWidth;
+            setTimeout(() => {
+                rightArrow.style.opacity = '1';
+                rightArrow.style.right = '20px';
+                rightArrow.style.transition = 'opacity 0.6s, right 0.8s cubic-bezier(0.4,0,0.2,1)';
             }, 100);
         }
     }
@@ -188,6 +220,7 @@ const loaderManager = {
                     animations.animationIcons();
                     animations.animationMenu();
                     animations.animationMainContent();
+                    animations.animatePageArrows();
                 }
             });
             this.fadeOutAudio();

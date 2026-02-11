@@ -125,6 +125,20 @@ const modalPages = {
         video: '',
         github: 'https://github.com/LucasGodebout/Password-Generator',
     },
+    'Cry-O-page':{
+        dataName: 'Cry-O',
+        class: 'CRY-O',
+        logo: 'images/projets/logo_Cry-O.svg',
+        title: 'Cry-O',
+        description: `Cry-O est un jeu vidéo créer lors d'une Game Jam organisée par MyDigitalSchool. Le thème de cette Game Jam était "La température". Avec mon équipe nous avons décidé de créer un jeu dans le même style que Doodle Jump où le joueur doit grimper le plus vite afin d'échapper à la lave qui monte au fur et à mesure de la progression du joueur.`,
+        project: 'PROJET ÉCOLE',
+        logiciels: ['images/tech/Unity.svg','images/tech/C-sharp.svg'],
+        backgroundColor: 'hsla(199, 20%, 20%, 1.00)',
+        textColor:'#fff',
+        dateDebut: '2026-06-02',
+        video: '',
+        github: 'https://github.com/LucasGodebout/Cry-O',
+    },
 };
 
 // Éléments DOM
@@ -149,6 +163,10 @@ const emailPage = document.getElementById('email-page');
 const legalOverlay = document.getElementById('legal-overlay');
 const legalClose = document.getElementById('legal-close');
 const legalPage = document.getElementById('legal-page');
+
+// Éléments pour changer de page
+const changePageLeft = document.getElementById('change-page-left');
+const changePageRight = document.getElementById('change-page-right');
 
 // Fonction pour créer les articles des projets
 function createProjectArticle() {

@@ -181,6 +181,25 @@ p {
 .icon:hover {
     transform: scale(1.2);
 }
+
+.change-page {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#change-page-right {
+    left: 85%;
+}
+#change-page-left {
+    right: 85%;
+}
+.change-page img {
+    width: 85%;
+    height: 85%;
+}
+
 .project {
     position: relative;
     width: 200px;
