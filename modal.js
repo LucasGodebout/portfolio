@@ -136,7 +136,7 @@ const modalPages = {
         backgroundColor: 'hsla(199, 20%, 20%, 1.00)',
         textColor:'#fff',
         dateDebut: '2026-06-02',
-        video: '',
+        video: 'https://youtu.be/PMUlRrVcGAQ?si=HHhwOvRIAOkRkPku',
         github: 'https://github.com/LucasGodebout/Cry-O',
     },
 };
@@ -150,8 +150,9 @@ const modalProject = document.getElementById('modal-project');
 const modalDescription = document.getElementById('modal-description');
 const modalClose = document.getElementById('modal-close');
 const modalSoftware = document.getElementById('modal-software');
-const modalVideo = document.getElementById('modal-content-video');
+const modalVideo = document.getElementById('modal-video');
 const projectsFirstPage = document.getElementById('project-first-page');
+const projectSecondPage = document.getElementById('project-second-page');
 const modalGithub = document.getElementById('modal-github');
 
 // Nouveaux éléments pour la page email
@@ -171,7 +172,7 @@ const changePageRight = document.getElementById('change-page-right');
 // Fonction pour créer les articles des projets
 function createProjectArticle() {
     if (projectsFirstPage) {
-        projectsFirstPage.innerHTML = ''; // Vider le conteneur avant de le remplir
+        projectsFirstPage.innerHTML = '';
         Object.entries(modalPages).forEach(([pageId, pageConfig]) => {
             const article = document.createElement('article');
             article.dataset.channelName = pageConfig.dataName;
@@ -191,6 +192,8 @@ function createProjectArticle() {
         sortProjectsByEndDate();
     }
 }
+
+
 
 // Fonction pour trier par date de fin les projets
 function sortProjectsByEndDate() {

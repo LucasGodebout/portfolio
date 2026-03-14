@@ -108,7 +108,7 @@
                         </div>
                         <div class="modal-project-content" id="modal-project-content">
                             <h3 class="modal-container-title" id="modal-container-title">Contenu du projet</h3>
-                            <video class="modal-content-video" id="modal-content-video" src=""></video>
+                            <iframe width="560" height="315" class="modal-video" id="modal-video" src="" frameborder="0" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
