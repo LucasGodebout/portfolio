@@ -13,6 +13,7 @@ const modalPages = {
         dateDebut: '2025-04-31',
         video: '',
         github: '',
+        site: '',
     },
     'bds-win-angers-page': {
         dataName: 'Bureau-des-Sports-Angers',
@@ -27,6 +28,7 @@ const modalPages = {
         dateDebut: '2025-03-18',
         video: '',
         github: 'https://github.com/LucasGodebout/BDS-WIN-ANGERS',
+        site: '',
     },
     'dans-les-bras-d-antoine-page': {
         dataName: 'Dans-les-bras-d-Antoine',
@@ -41,6 +43,7 @@ const modalPages = {
         dateDebut: '2025-03-03',
         video: '',
         github: '',
+        site: '',
     },
     'imc-page':{
         dataName: 'IMC',
@@ -55,6 +58,7 @@ const modalPages = {
         dateDebut: '2025-01-21',
         video: '',
         github: 'https://github.com/LucasGodebout/IMC',
+        site: '',
     },
     'quizz-page':{
         dataName: 'Quizz',
@@ -68,6 +72,8 @@ const modalPages = {
         textColor: '#ffffff',
         dateDebut: '2025-01-10',
         video: 'https://github.com/LucasGodebout/Quizz',
+        github: 'https://github.com/LucasGodebout/Quizz',
+        site: '',
     },
     'smart-drive-page':{
         dataName: 'Smart Drive',
@@ -82,6 +88,7 @@ const modalPages = {
         dateDebut: '2024-12-16',
         video: '',
         github: 'https://github.com/LucasGodebout/Smart-Drive',
+        site: '',
     },
     'lego-page':{
         dataName: 'Lego',
@@ -96,6 +103,7 @@ const modalPages = {
         dateDebut: '2024-10-10',
         video: '',
         github: '',
+        site: '',
     },
     'undertale-page':{
         dataName: 'Undertale',
@@ -110,6 +118,7 @@ const modalPages = {
         dateDebut: '2024-10-11',
         video: '',
         github: 'https://github.com/LucasGodebout/Undertale',
+        site: '',
     },
     'Password-Generator-page':{
         dataName: 'Password Generator',
@@ -124,6 +133,7 @@ const modalPages = {
         dateDebut: '2025-09-20',
         video: '',
         github: 'https://github.com/LucasGodebout/Password-Generator',
+        site: '',
     },
     'Cry-O-page':{
         dataName: 'Cry-O',
@@ -136,9 +146,26 @@ const modalPages = {
         backgroundColor: 'hsla(199, 20%, 20%, 1.00)',
         textColor:'#fff',
         dateDebut: '2026-06-02',
-        video: 'https://youtu.be/PMUlRrVcGAQ?si=HHhwOvRIAOkRkPku',
+        video: 'https://youtu.be/PMUlRrVcGAQ?si=gkznRwTvHJsSx6iG',
         github: 'https://github.com/LucasGodebout/Cry-O',
+        site: 'https://sarahgadrasgmailcom.itch.io/cry-o',
     },
+    'Omeega-page':{
+        dataName: 'Omeega',
+        class: 'OMEEGA',
+        logo: 'images/projets/Omeega.png',
+        title: 'Omeega',
+        description: `Omeega est un streamer sur Twitch qui joue principalement à Minecraft. Je fais parti de son équipe en tant que dérusher, c'est à dire que je m'occupe de faire des clips de certains moments de streams pour les garder et réaliser une vidéo best-of sur youtube. Mais depuis 2025 je m'occupe aussi à 90% de la chaine youtube des rediffusions de ses lives. Je m'occupe de faire la programmation des vidéos, les titres, les descriptions, les playlists et tout récemment les miniatures. J'aime beaucoup cet aspect un peu plus créatif que le développement et je suis très content de pouvoir faire ça pour lui, d'autant plus que c'est un projet bénévole et que je le fais par passion pour le contenu qu'il crée. `,
+        project: 'BÉNÉVOLAT',
+        logiciels: ['images/tech/YouTube-Studio.svg','images/tech/Premiere.svg','images/tech/Photoshop.svg', 'images/tech/Blender.svg', 'images/tech/Discord.svg'],
+        backgroundColor: 'lightseagreen',
+        backgroundImage: 'url("images/projets/Omeega-background.gif")',
+        textColor:'#fff',
+        dateDebut: '2023-08-14',
+        video: 'https://youtu.be/OyyNqhiwiAc?si=TIAa3BMcbe_qeVXT',
+        github: '',
+        site: '',
+    }
 };
 
 // Éléments DOM
@@ -150,10 +177,12 @@ const modalProject = document.getElementById('modal-project');
 const modalDescription = document.getElementById('modal-description');
 const modalClose = document.getElementById('modal-close');
 const modalSoftware = document.getElementById('modal-software');
-const modalVideo = document.getElementById('modal-video');
+const modalContentContainer = document.getElementById('modal-project-container');
 const projectsFirstPage = document.getElementById('project-first-page');
 const projectSecondPage = document.getElementById('project-second-page');
 const modalGithub = document.getElementById('modal-github');
+const modalSite = document.getElementById('modal-site');
+const modalVideo = document.getElementById('modal-video');
 
 // Nouveaux éléments pour la page email
 const emailOverlay = document.getElementById('email-overlay');
@@ -192,8 +221,6 @@ function createProjectArticle() {
         sortProjectsByEndDate();
     }
 }
-
-
 
 // Fonction pour trier par date de fin les projets
 function sortProjectsByEndDate() {
@@ -246,13 +273,35 @@ function openModalPage(pageId) {
     modalLogo.src = pageConfig.logo;
     modalProject.textContent = pageConfig.project;
     modalDescription.textContent = pageConfig.description;
-    modalVideo.src = pageConfig.video;
-    if (modalGithub) {
-        modalGithub.setAttribute('href', pageConfig.github ? pageConfig.github : '#');
+    if (pageConfig.github.trim() !== '') {
+        modalGithub.style.display = 'block';
+        modalGithub.href = pageConfig.github;
+    } else {
+        modalGithub.style.display = 'none';
     }
+    if (pageConfig.site.trim() !== '') {
+        modalSite.style.display = 'block';
+        modalSite.href = pageConfig.site;
+    } else {
+        modalSite.style.display = 'none';
+    }
+    if (pageConfig.video.trim() !== '') {
+        modalVideo.style.display = 'block';
+        modalVideo.href = pageConfig.video;
+    } else {
+        modalVideo.style.display = 'none';
+    }
+    
+
 
     // Appliquer les styles spécifiques
-    modalPage.style.background = pageConfig.backgroundColor;
+    if (pageConfig.backgroundImage) {
+        modalPage.style.backgroundImage = pageConfig.backgroundImage;
+        modalPage.style.backgroundSize = 'cover';
+        modalPage.style.backgroundPosition = 'center';
+    } else {
+            modalPage.style.background = pageConfig.backgroundColor;
+    }
     modalPage.id = pageId;
     modalPage.style.color = pageConfig.textColor;
 
@@ -292,7 +341,7 @@ function openModalPage(pageId) {
     } else if (pageConfig.project === 'PROJET ÉCOLE') {
         modalProject.classList.add('noreel');
     } else if (pageConfig.project === 'BÉNÉVOLAT') {
-        modalProject.classList.add('benevole');
+        modalProject.classList.add('benevolat');
     }
 }
 
@@ -333,6 +382,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const pageId = targetElement.getAttribute('data-channel-show');
             const bubble = document.createElement('div');
             bubble.className = 'project-bubble';
+            if (bubble)
             bubble.textContent = modalPages[pageId].title;
             targetElement.appendChild(bubble);
             targetElement.addEventListener('mouseleave', function() {
