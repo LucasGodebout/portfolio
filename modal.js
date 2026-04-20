@@ -28,7 +28,7 @@ const modalPages = {
         dateDebut: '2025-03-18',
         video: '',
         github: 'https://github.com/LucasGodebout/BDS-WIN-ANGERS',
-        site: '',
+        site: 'https://lucas-godebout.mds-angers.yt/bds-win-angers/',
     },
     'dans-les-bras-d-antoine-page': {
         dataName: 'Dans-les-bras-d-Antoine',
@@ -43,7 +43,7 @@ const modalPages = {
         dateDebut: '2025-03-03',
         video: '',
         github: '',
-        site: '',
+        site: 'https://lucas-godebout.mds-angers.yt/Test/',
     },
     'imc-page':{
         dataName: 'IMC',
@@ -58,7 +58,7 @@ const modalPages = {
         dateDebut: '2025-01-21',
         video: '',
         github: 'https://github.com/LucasGodebout/IMC',
-        site: '',
+        site: 'https://lucas-godebout.mds-angers.yt/imc/',
     },
     'quizz-page':{
         dataName: 'Quizz',
@@ -73,7 +73,7 @@ const modalPages = {
         dateDebut: '2025-01-10',
         video: 'https://github.com/LucasGodebout/Quizz',
         github: 'https://github.com/LucasGodebout/Quizz',
-        site: '',
+        site: 'https://lucas-godebout.mds-angers.yt/quizz/',
     },
     'smart-drive-page':{
         dataName: 'Smart Drive',
@@ -88,7 +88,7 @@ const modalPages = {
         dateDebut: '2024-12-16',
         video: '',
         github: 'https://github.com/LucasGodebout/Smart-Drive',
-        site: '',
+        site: 'https://lucas-godebout.mds-angers.yt/SmartDrive/',
     },
     'lego-page':{
         dataName: 'Lego',
@@ -103,7 +103,7 @@ const modalPages = {
         dateDebut: '2024-10-10',
         video: '',
         github: '',
-        site: '',
+        site: 'https://lucas-godebout.mds-angers.yt/lego/',
     },
     'undertale-page':{
         dataName: 'Undertale',
@@ -118,7 +118,7 @@ const modalPages = {
         dateDebut: '2024-10-11',
         video: '',
         github: 'https://github.com/LucasGodebout/Undertale',
-        site: '',
+        site: 'https://lucas-godebout.mds-angers.yt/undertale/',
     },
     'Password-Generator-page':{
         dataName: 'Password Generator',
@@ -133,7 +133,7 @@ const modalPages = {
         dateDebut: '2025-09-20',
         video: '',
         github: 'https://github.com/LucasGodebout/Password-Generator',
-        site: '',
+        site: 'https://lucas-godebout.mds-angers.yt/password-generator/',
     },
     'Cry-O-page':{
         dataName: 'Cry-O',
@@ -155,16 +155,16 @@ const modalPages = {
         class: 'OMEEGA',
         logo: 'images/projets/Omeega.png',
         title: 'Omeega',
-        description: `Omeega est un streamer sur Twitch qui joue principalement à Minecraft. Je fais parti de son équipe en tant que dérusher, c'est à dire que je m'occupe de faire des clips de certains moments de streams pour les garder et réaliser une vidéo best-of sur youtube. Mais depuis 2025 je m'occupe aussi à 90% de la chaine youtube des rediffusions de ses lives. Je m'occupe de faire la programmation des vidéos, les titres, les descriptions, les playlists et tout récemment les miniatures. J'aime beaucoup cet aspect un peu plus créatif que le développement et je suis très content de pouvoir faire ça pour lui, d'autant plus que c'est un projet bénévole et que je le fais par passion pour le contenu qu'il crée. `,
+        description: `Omeega est un streamer sur Twitch qui joue principalement à Minecraft. Je fais partie de son équipe en tant que dérusher, c'est-à-dire que je m'occupe de faire des clips de certains moments de streams pour les garder et réaliser une vidéo best-of sur YouTube. Mais depuis 2025, je m'occupe aussi à 90 % de la chaîne YouTube des rediffusions de ses lives. Je m'occupe de faire la programmation des vidéos, les titres, les descriptions, les playlists et, tout récemment, les miniatures. J'aime beaucoup cet aspect un peu plus créatif que le développement et je suis très content de pouvoir faire ça pour lui, d'autant plus que c'est un projet bénévole et que je le fais par passion pour le contenu qu'il crée.`,
         project: 'BÉNÉVOLAT',
-        logiciels: ['images/tech/YouTube-Studio.svg','images/tech/Premiere.svg','images/tech/Photoshop.svg', 'images/tech/Blender.svg', 'images/tech/Discord.svg'],
+        logiciels: ['images/tech/YouTube-Studio.svg','images/tech/Premiere.svg','images/tech/Photoshop.svg', 'images/tech/Blender.svg', 'images/tech/Discord.svg', 'images/tech/Notion.svg'],
         backgroundColor: 'lightseagreen',
         backgroundImage: 'url("images/projets/Omeega-background.gif")',
         textColor:'#fff',
         dateDebut: '2023-08-14',
         video: 'https://youtu.be/OyyNqhiwiAc?si=TIAa3BMcbe_qeVXT',
         github: '',
-        site: '',
+        site: 'https://www.youtube.com/channel/UCYLvbF3lISufIU_HC_uwDDg',
     }
 };
 
