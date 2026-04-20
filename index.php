@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="library/jquery-3.7.1.min.js"></script>
     <title>Lucas Godebout - Portfolio</title>
-    <link rel="icon" type="image/x-png" href="images/lurk.png">
+    <link rel="icon" type="image/x-png" href="images/icons/lurk.png">
 </head>
 <body>
     <section id="loader">
