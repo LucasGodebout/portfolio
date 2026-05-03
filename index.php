@@ -76,12 +76,6 @@
                     </a>
                 </div>
             </div>
-            <!-- <a id="change-page-right" class="change-page" onclick="goToNextPage()">
-                <img src="images/icons/right-arrow.svg" alt="Flèche droite">
-            </a>
-            <a id="change-page-left" class="change-page" onclick="goToPreviousPage()">
-                <img src="images/icons/left-arrow.svg" alt="Flèche gauche">
-            </a> -->
         </div>
         <section id="projects-container">
             <div id="projects">
@@ -176,7 +170,6 @@
             </div>
         </section>
     </main>
-    <script src="loader.js"></script>
-    <script src="modal.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
