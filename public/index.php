@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,26 +19,26 @@
     <!-- Open Graph -->
     <meta property="og:title" content="Lucas Godebout - Portfolio">
     <meta property="og:description" content="Découvrez et explorez le portfolio de Lucas Godebout, un développeur passionné.">
-    <meta property="og:image" content="images/og-image.png">
+    <meta property="og:image" content="/assets/images/og-image.png">
     <meta property="og:url" content="">
     <meta property="og:type" content="website">
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Lucas Godebout - Portfolio">
     <meta name="twitter:description" content="Découvrez et explorez le portfolio de Lucas Godebout, un développeur passionné.">
-    <meta name="twitter:image" content="images/twitter-image.png">
+    <meta name="twitter:image" content="/assets/images/twitter-image.png">
     <meta name="twitter:site" content="@VotreTwitterHandle">
 
-    <link rel="stylesheet" href="style.css">
-    <script src="library/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="../src/library/jquery-3.7.1.min.js"></script>
     <title>Lucas Godebout - Portfolio</title>
-    <link rel="icon" type="image/x-png" href="images/lurk.png">
+    <link rel="icon" type="image/x-png" href="./assets/images/lurk.png">
 </head>
 <body>
     <section id="loader">
         <div id="loader-white-bg">
             <div id="loader-logo-container">
-                <img class="logo" src="images/icons/lurk.png" alt="Lucas Godebout Logo">
+                <img class="logo" src="./assets/images/icons/lurk.png" alt="Lucas Godebout Logo">
             </div>
             <div id="loader-text">
                 <p class="loader-title">Lucas Godebout</p>
@@ -50,7 +50,7 @@
     <main id="main-content">
         <div id="front-page">
             <a id="logo" onclick="openCVPage()">
-                <img class="logo" src="images/icons/lurk.png" alt="Lucas Godebout Logo">               
+                <img class="logo" src="./assets/images/icons/lurk.png" alt="Lucas Godebout Logo">               
             </a>
             <div id="menu-icons">
                 <div id="menu">
@@ -121,21 +121,25 @@
             <div class="email-page" id="email-page">
                 <div class="email-page-content">
                     <div class="email-header">
-                        <img class="email-icon" src="images/icons/emailW.svg" alt="Email Icon" class="email-logo">
+                        <img class="email-icon" src="./assets/images/icons/emailW.svg" alt="Email Icon" class="email-logo">
                         <h2 class="email-title">Contactez-moi</h2>
                         <button class="modal-close" id="email-close">&times;</button>
                     </div>
                     <div class="email-content" id="email-content">
                         <div class="email-online">
-                            <img class="email-online-icon" src="images/icons/lurk.png" alt="En ligne">
+                            <img class="email-online-icon" src="./assets/images/icons/lurk.png" alt="En ligne">
                             <div class="email-name">
                                 <p>Lucas</p>
                                 <p class="email-fullname">Lucas Godebout</p>
                             </div>
                         </div>
                         <form class="email-form" id="email-form" method="POST" action="javascript:void(0);">
-                            <label for="name" class="email-label">Nom:</label>
+                            <label for="name" class="email-label">Nom Prénom:</label>
                             <input class="email-input" type="text" id="name" name="name" required>
+                            <label for="subject" class="email-label">Sujet:</label>
+                            <input class="email-input" type="text" id="subject" name="subject" required>
+                            <label for="company" class="email-label">Entreprise:</label>
+                            <input class="email-input" type="text" id="company" name="company" required>
                             <label for="email" class="email-label">Email:</label>
                             <input class="email-input" type="email" id="email" name="email" required>
                             <label for="message" class="email-label">Message:</label>
@@ -170,6 +174,6 @@
             </div>
         </section>
     </main>
-    <script src="main.js"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
 </html>
