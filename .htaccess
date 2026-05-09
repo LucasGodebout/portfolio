@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# Bloque l'accès au dossier /src
+RewriteRule ^src/.*$ - [F,L]
+
+# Sécurité supplémentaire pour les fichiers sensibles
+<FilesMatch "^\.env|composer\.json|composer\.lock">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
