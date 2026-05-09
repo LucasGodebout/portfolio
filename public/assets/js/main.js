@@ -1,6 +1,6 @@
 // Configuration du background vidéo
 const background = {
-    videoSrc: 'bg.mp4',
+    videoSrc: './assets/images/bg.mp4',
     videoElement: null,
 
     createVideoElement() {
@@ -38,11 +38,11 @@ const modalPages = {
     'my-and-community-page': {
         dataName: 'My-and-community',
         class: 'MAC',
-        logo: 'images/projets/Logo_MYco_noir.svg',
+        logo: './assets/images/projets/Logo_MYco_noir.svg',
         title: 'My and Community',
         description: `My and Community est une entreprise de création de sites web sur mesure et responsive, des sites vitrines, sites de e-commerce, ou encore des applications mobiles, le tout administrable via un back office commun à tous ses clients. Lors de mon stage de 44 jours entre Avril et Juin, j'ai participé au développement d'une application sur mesure, réalisé en XML et C++ via l'IDE QT Creator, pour Campers Van Rouen, une entreprise de réparation et d'entretien de véhicules de loisir. L'application contient un système d'état des lieux permettant de voir les photos des réparations des différents dossiers en cours et de modifier certaines informations lorsque le fichier n'est pas clos. Grâce à cette application, Campers Van Rouen ne pourra plus se faire arnaquer par des clients qui  se plaignent d'une dégradation du véhicule après réparation alors qu'elle a été notifiée lors de l'état des lieux. De plus, les dossiers sont disponibles sur un back-office permettant de voir les dossiers depuis chez soi.`,
         project: 'PROJET ENTREPRISE',
-        logiciels: ['images/tech/HTML.svg', 'images/tech/CSS.svg', 'images/tech/PHP.svg', 'images/tech/JS.svg', 'images/tech/SQL.svg', 'images/tech/QT.svg', 'images/tech/Figma.svg'],
+        logiciels: ['./assets/images/tech/HTML.svg', './assets/images/tech/CSS.svg', './assets/images/tech/PHP.svg', './assets/images/tech/JS.svg', './assets/images/tech/SQL.svg', './assets/images/tech/QT.svg', './assets/images/tech/Figma.svg'],
         backgroundColor: 'hsla(191, 62%, 61%, 1)',
         textColor: '#ffffff',
         dateDebut: '2025-04-31',
@@ -53,11 +53,11 @@ const modalPages = {
     'bds-win-angers-page': {
         dataName: 'Bureau-des-Sports-Angers',
         class: 'BDS',
-        logo: 'images/projets/logo_BDS_WIN_ANGERS.svg',
+        logo: './assets/images/projets/logo_BDS_WIN_ANGERS.svg',
         title: 'Bureau des Sports Angers',
         description: `Le Bureau des Sports de WIN Sport School Angers est une association étudiante visant à dynamiser la vie sportive et à proposer des activités aux étudiants, notamment au sein des Écoles Supérieures des Pays de la Loire. Ce projet a été réalisé lors de mon partiel de fin de 1ère année et j'ai du réaliser l'entièreté du projet, c'est à dire le marketing de l'entreprise, la maquette du site, l'intégration de cette maquette, ainsi que la communication sur les réseaux sociaux. Pour ce qui est du site, l'objectif était de le faire grâce à WordPress, mais j'ai préféré le développer en HTML, CSS, JavaScript et PHP pour montrer mes capacités de développement web. Lors du développement je me suis occupé de la page d'accueil qui fait office de résumé de l'association et des pages présentes sur le site web, une page de calendrier afin de voir les futurs événements avec un système de filtre en fonction des sports, une page résultat pour voir les résultats des différentes compétiions avec le même système de filtre, une page galerie pour voir les photos des événements passés, une page de contact et enfin un espace membre avec un système de connexion. Ce projet m'a permis de montrer les résultats de mon apprentissage en développement web et dans les autres compétences enseignées à My Digital School, mais aussi de me confronter à un projet complet en autonomie, ce qui m'a permis de développer mes compétences en gestion de projet et en organisation.`,
         project: 'PROJET ÉCOLE',
-        logiciels: ['images/tech/HTML.svg', 'images/tech/CSS.svg', 'images/tech/PHP.svg', 'images/tech/JS.svg', 'images/tech/Figma.svg'],
+        logiciels: ['./assets/images/tech/HTML.svg', './assets/images/tech/CSS.svg', './assets/images/tech/PHP.svg', './assets/images/tech/JS.svg', './assets/images/tech/Figma.svg'],
         backgroundColor: 'hsla(234, 96%, 80%, 1.00)',
         textColor: '#ffffff',
         dateDebut: '2025-03-18',
@@ -68,11 +68,11 @@ const modalPages = {
     'dans-les-bras-d-antoine-page': {
         dataName: 'Dans-les-bras-d-Antoine',
         class: 'DLBA',
-        logo: 'images/projets/Logo_Antoine.svg',
+        logo: './assets/images/projets/Logo_Antoine.svg',
         title: 'Dans les bras d\'Antoine',
         description: `Dans les bras d'Antoine est une association qui lutte contre les cancers pédiatriques suite au décès d'Antoine à 15 ans. Elle a pour but de récolter des fonds pour la recherche contre ce type de cancer. Ce projet a été réalisé lors d'un cours nommé "Digital Sans Frontière" où chaque groupe doit créer un site internet et réaliser la communication au profit d'une association. Lors de ce projet, j'ai pu travailler en équipe de 3 personnes avec une personne chargé de la maquette du site et une autre chargée de la communication de l'association. J'ai pour ma part réalisé le développement du site internet sur WordPress. Le site contient une page d'accueil présentant l'association et leur but, une page expliquant l'histoire de l'association, une page d'information sur les actualités concernant le cancer pédiatrique, une page pour devenir bénévole, une page de contact et enfin une page de dons avec un système de paiement en ligne sur le site Helloasso. Travailler sur ce projet était très intéressant car c'était la première fois qu'on travaillait avec un client réel, ce qui nous a permis de nous confronter à des demandes et des besoins réels, mais aussi de faire quelque chose d'utile pour une bonne cause, ce qui était très gratifiant. De plus, travailler en équipe sur un projet complet m'a permis de développer mes compétences en communication, en gestion de projet et en travail d'équipe, ce qui est très important dans le monde professionnel.`,
         project: 'PROJET ÉCOLE',
-        logiciels: ['images/tech/WordPress.svg', 'images/tech/Figma.svg'],
+        logiciels: ['./assets/images/tech/WordPress.svg', './assets/images/tech/Figma.svg'],
         backgroundColor: 'rgb(41, 131, 18)',
         textColor: '#ffffff',
         dateDebut: '2025-03-03',
@@ -83,11 +83,11 @@ const modalPages = {
     'imc-page':{
         dataName: 'IMC',
         class: 'IMC',
-        logo: 'images/projets/Logo_IMC.svg',
+        logo: './assets/images/projets/Logo_IMC.svg',
         title: 'Calculateur d\'IMC',
         description: `Ce projet est un calculateur d'IMC (Indice de Masse Corporelle) développé en PHP. L'utilisateur peut entrer son poids et sa taille, et le programme calcule son IMC en utilisant la formule standard. En fonction de la valeur calculée, le programme affiche une catégorie de poids correspondante, allant de "Insuffisance pondérale" à "Obésité sévère". Tous les résultats sont enregistrés dans un fichier texte et affichés sur le site. Ce projet de fin de matière sur l'environnement PHP m'a permis d'apprendre et de mettre en pratique les bases du développement web en PHP, ainsi que de comprendre comment gérer les données utilisateur et les stocker de manière simple.`,
         project: 'PROJET ÉCOLE',
-        logiciels: ['images/tech/HTML.svg', 'images/tech/CSS.svg', 'images/tech/PHP.svg'],
+        logiciels: ['./assets/images/tech/HTML.svg', './assets/images/tech/CSS.svg', './assets/images/tech/PHP.svg'],
         backgroundColor: 'hsla(207, 50%, 70%, 1.00)',
         textColor: '#ffffff',
         dateDebut: '2025-01-21',
@@ -98,11 +98,11 @@ const modalPages = {
     'quizz-page':{
         dataName: 'Quizz',
         class: 'QUIZZ',
-        logo: 'images/projets/Logo_Quizz.svg',
+        logo: './assets/images/projets/Logo_Quizz.svg',
         title: 'Quizz',
         description: `Ce projet est un quizz interactif développé en JavaScript. Il présente une série de questions à choix multiples, permettant aux utilisateurs de tester leurs connaissances sur divers sujets. Le quizz suit les réponses de l'utilisateur, calcule le score final et affiche les résultats à la fin. Le design est simple et épuré, offrant une expérience utilisateur agréable. Ce projet de fin de module sur le développement web en JavaScript m'a permis d'apprendre à manipuler le DOM, à gérer les événements utilisateur et à structurer une application web de manière efficace.`,
         project: 'PROJET ÉCOLE',
-        logiciels: ['images/tech/HTML.svg', 'images/tech/CSS.svg', 'images/tech/JS.svg'],
+        logiciels: ['./assets/images/tech/HTML.svg', './assets/images/tech/CSS.svg', './assets/images/tech/JS.svg'],
         backgroundColor: 'hsla(140, 43.7%, 72.2%, 1.00)',
         textColor: '#ffffff',
         dateDebut: '2025-01-10',
@@ -113,11 +113,11 @@ const modalPages = {
     'smart-drive-page':{
         dataName: 'Smart Drive',
         class: 'SD',
-        logo: 'images/projets/logo_SD_rouge.svg',
+        logo: './assets/images/projets/logo_SD_rouge.svg',
         title: 'Smart Drive',
         description: `Smart Drive est un projet proposant un service de transport autonome, conçu pour des déplacements rapides, écologiques et confortables. Similaire aux taxis mais sans chauffeur, il cible une clientèle aisée de 20 à 60 ans en quête d'une expérience de voyage unique et innovante. Ce projet a été réalisé lors de mon premier partiel en groupe de 3 personnes, où nous devions créer une entreprise fictive et réaliser le marketing, la maquette du site internet, l'intégration et la communication. J'ai principalement travaillé sur le développement du site web en HTML, CSS et JavaScript, en intégrant les nombreuses pages du sites et quelque fonctionnalité comme le responsive ou encore un menu burger. Ce projet m'a permis de mettre en pratique mes compétences en développement web tout en développant ma créativité et ma capacité à travailler en équipe sur un projet complet.`,
         project: 'PROJET ÉCOLE',
-        logiciels: ['images/tech/HTML.svg','images/tech/CSS.svg','images/tech/JS.svg','images/tech/GIT.svg'],
+        logiciels: ['./assets/images/tech/HTML.svg','./assets/images/tech/CSS.svg','./assets/images/tech/JS.svg','./assets/images/tech/GIT.svg'],
         backgroundColor: 'hsla(359, 72%, 37%, 1)',
         textColor:'#fff',
         dateDebut: '2024-12-16',
@@ -128,11 +128,11 @@ const modalPages = {
     'lego-page':{
         dataName: 'Lego',
         class: 'LEGO',
-        logo: 'images/projets/logo_lego.svg',
+        logo: './assets/images/projets/logo_lego.svg',
         title: 'Lego Store',
         description: `Ce projet est une réplique simplifiée d'un site de e-commerce pour la marque Lego fait sur WordPress. L'objectif était d'apprendre à utiliser WordPress en premier lieu notamment avec le plugin Elementor, puis j'ai ajouté le plugin WooCommerce pour obtenir un site d'e-commerce fonctionnel. Ce projet m'a permis de découvrir les possibilités offertes par WordPress et de comprendre comment créer un site web complet en utilisant des plugins, tout en développant mes compétences en design et en gestion de contenu. Le site contient une page d'accueil présentant la marque et les différentes catégories de produits, une page boutique avec les différents produits proposés à la vente, des pages de détails produits, une page de panier et enfin un espace membre avec un système de connexion. Bien que ce projet soit moins technique que les autres, il m'a permis d'apprendre à utiliser un CMS et à créer un site web fonctionnel sans avoir à coder toutes les fonctionnalités moi-même`,
         project: 'PROJET ÉCOLE',
-        logiciels: ['images/tech/WordPress.svg','images/tech/Figma.svg'],
+        logiciels: ['./assets/images/tech/WordPress.svg','./assets/images/tech/Figma.svg'],
         backgroundColor: 'rgb(235, 108, 108)',
         textColor:'#fff',
         dateDebut: '2024-10-10',
@@ -143,11 +143,11 @@ const modalPages = {
     'undertale-page':{
         dataName: 'Undertale',
         class: 'UNDERTALE',
-        logo: 'images/projets/logo_undertale.svg',
+        logo: './assets/images/projets/logo_undertale.svg',
         title: 'Undertale',
         description: `Ce site est un projet web réalisé autour de l’univers du jeu Undertale créé par Toby Fox. Il s’agit d’un site vitrine dédié à l’exploration de l’histoire, des personnages emblématiques, des musiques et de l’esthétique unique du jeu, à travers un design immersif et une navigation simple. Ce projet a été réalisé dans le cadre d'un cours de développement web où l'objectif était de créer un site web statique en utilisant HTML et CSS. Le site devait posséder 3 pages distinctes : une page d'accueil, une autre page du style boutique, présentation et plus, et enfin une page contact.`,
         project: 'PROJET ÉCOLE',
-        logiciels: ['images/tech/HTML.svg','images/tech/CSS.svg','images/tech/JS.svg', 'images/tech/Figma.svg'],
+        logiciels: ['./assets/images/tech/HTML.svg','./assets/images/tech/CSS.svg','./assets/images/tech/JS.svg', './assets/images/tech/Figma.svg'],
         backgroundColor: 'hsla(199, 20%, 20%, 1.00)',
         textColor:'#fff',
         dateDebut: '2024-10-11',
@@ -158,11 +158,11 @@ const modalPages = {
     'Password-Generator-page':{
         dataName: 'Password Generator',
         class: 'PASSWORD-GENERATOR',
-        logo: 'images/projets/logo_PG.svg',
+        logo: './assets/images/projets/logo_PG.svg',
         title: 'Password Generator',
         description: `Ce projet est un générateur de mots de passe sécurisé développé en JavaScript. Il permet aux utilisateurs de créer des mots de passe aléatoires en fonction de critères personnalisables tels que la longueur et les types de caractères (majuscules, minuscules, chiffres, symboles). Le générateur a été créé suite à un besoin personnel de créer des mots de passe sécurisés sans passer par des sites externes qui peuvent récupérer ces mots de passe ainsi que pour apprendre à développer en JavaScript.`,
         project: 'PROJET PERSONNEL',
-        logiciels: ['images/tech/HTML.svg','images/tech/CSS.svg','images/tech/JS.svg'],
+        logiciels: ['./assets/images/tech/HTML.svg','./assets/images/tech/CSS.svg','./assets/images/tech/JS.svg'],
         backgroundColor: 'lightseagreen',
         textColor:'#fff',
         dateDebut: '2025-09-20',
@@ -173,11 +173,11 @@ const modalPages = {
     'Cry-O-page':{
         dataName: 'Cry-O',
         class: 'CRY-O',
-        logo: 'images/projets/logo_Cry-o.svg',
+        logo: './assets/images/projets/logo_Cry-o.svg',
         title: 'Cry-O',
         description: `Cry-O est un jeu de plateforme 2D développé avec Unity et C# lors d’une Game Jam organisée par My Digital School. En équipes pluridisciplinaires (développement, design, marketing), nous devions concevoir un jeu en une semaine autour du thème « la température ». Nous avons créé un jeu inspiré de Doodle Jump, dans lequel le joueur doit progresser vers le haut tout en échappant à une montée de lave. J’ai contribué principalement à la programmation et au game design. J’ai notamment développé la caméra dynamique, le décor infini, ainsi que la création et la génération aléatoire des plateformes avec leur physique. J’ai également implémenté les limites du niveau, la montée progressive de la lave, ainsi que les différentes scènes du jeu (menus, fin), les animations et le sound design. Ce projet, première expérience complète en développement de jeu vidéo, m’a permis de renforcer mes compétences techniques ainsi que mon travail en équipe et ma gestion de projet.`,
         project: 'PROJET ÉCOLE',
-        logiciels: ['images/tech/Unity.svg','images/tech/C-sharp.svg'],
+        logiciels: ['./assets/images/tech/Unity.svg','./assets/images/tech/C-sharp.svg'],
         backgroundColor: 'hsla(199, 20%, 20%, 1.00)',
         textColor:'#fff',
         dateDebut: '2026-06-02',
@@ -188,11 +188,11 @@ const modalPages = {
     'Omeega-page':{
         dataName: 'Omeega',
         class: 'OMEEGA',
-        logo: 'images/projets/Omeega.png',
+        logo: './assets/images/projets/Omeega.png',
         title: 'Omeega',
         description: `Omeega est un streamer sur Twitch qui joue principalement à Minecraft. Je fais partie de son équipe en tant que dérusher depuis août 2023, c'est-à-dire que je m'occupe de faire des clips de certains moments de streams pour les garder et réaliser une vidéo best-of sur YouTube. Mais depuis 2025, je m'occupe aussi à 90 % de la chaîne YouTube des rediffusions de ses lives. Je m'occupe de faire la programmation des vidéos, les titres, les descriptions, les playlists sur youtube studio et, tout récemment, les miniatures grâce à Blockbench, Blender et Photoshop. J'aime beaucoup cet aspect un peu plus créatif que le développement et je suis très content de pouvoir faire ça pour lui, d'autant plus que c'est un projet bénévole et que je le fais par passion pour le contenu qu'il crée.`,
         project: 'BÉNÉVOLAT',
-        logiciels: ['images/tech/YouTube-Studio.svg','images/tech/Premiere.svg','images/tech/Photoshop.svg', 'images/tech/Blender.svg', 'images/tech/Discord.svg', 'images/tech/Notion.svg','images/tech/Blockbench.png'],
+        logiciels: ['./assets/images/tech/YouTube-Studio.svg','./assets/images/tech/Premiere.svg','./assets/images/tech/Photoshop.svg', './assets/images/tech/Blender.svg', './assets/images/tech/Discord.svg', './assets/images/tech/Notion.svg','./assets/images/tech/Blockbench.png'],
         backgroundColor: 'lightseagreen',
         backgroundImage: 'url("images/projets/Omeega-background.gif")',
         textColor:'#fff',
@@ -422,7 +422,6 @@ function createProjectArticles() {
 }
 
 // Fonction pour trier par date de fin les projets
-
 function sortProjectsByEndDate() {
     if (!projectsFirstPage) return;
     const articles = Array.from(projectsFirstPage.querySelectorAll('article'));
@@ -590,88 +589,36 @@ function closeEmailPage() {
     }, 300); // Durée de l'animation
 }
 
-function showToast(message, isSuccess) {
-    // Créer l'élément toast
-    const toast = document.createElement('div');
-    toast.className = 'toast-notification';
-    toast.textContent = message;
-    
-    // Style en fonction du succès ou de l'erreur
-    toast.style.backgroundColor = isSuccess ? '#4CAF50' : '#f44336';
-    
-    document.body.appendChild(toast);
-    
-    // Animation d'apparition (via CSS ou direct)
-    setTimeout(() => {
-        toast.classList.add('show');
-    }, 100);
-    
-    // Supprimer après 3 secondes
-    setTimeout(() => {
-        toast.classList.remove('show');
-        setTimeout(() => {
-            toast.remove();
-        }, 500);
-    }, 3000);
-}
+$(document).ready(function() {
+    $('#email-form').on('submit', function(e) {
+        e.preventDefault(); // Empêche le rechargement de la page
 
-document.addEventListener('DOMContentLoaded', function () {
-    const emailForm = document.getElementById('email-form');
-    
-    if (emailForm) {
-        emailForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            
-            // Désactiver le bouton pendant l'envoi
-            const submitButton = emailForm.querySelector('.email-submit');
-            const originalButtonText = submitButton.textContent;
-            submitButton.disabled = true;
-            submitButton.textContent = 'Envoi...';
-            // Récupérer les données du formulaire
-            const formData = new FormData(emailForm);
-            // Envoyer la requête AJAX
-            fetch('PHPMailer/contact.php', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Erreur réseau');
-                }
-                return response.json();
-            })
-            .then(data => {
-                // Réactiver le bouton
-                submitButton.disabled = false;
-                submitButton.textContent = originalButtonText;
-                // Si succès
-                if (data.success) {
-                    // Réinitialiser le formulaire
-                    emailForm.reset();
-                    // Afficher le toast de succès
-                    showToast('Message envoyé avec succès !', true);
-                    // Fermer le formulaire après un court délai
-                    setTimeout(() => {
-                        closeEmailPage();
-                    }, 500);
+        // Récupération des données du formulaire
+        const formData = {
+            name: $('#name').val(),
+            email: $('#email').val(),
+            message: $('#message').val()
+        };
+
+        // Envoi via AJAX
+        $.ajax({
+            type: 'POST',
+            url: '../src/PHPMailer/contact.php', // Chemin vers ton fichier PHP
+            data: formData,
+            dataType: 'json',
+            success: function(response) {
+                if (response.success) {
+                    alert(response.message);
+                    $('#email-form')[0].reset(); // Vide le formulaire
                 } else {
-                    // Afficher le toast d'erreur
-                    showToast(data.message || 'Une erreur est survenue.', false);
+                    alert('Erreur : ' + response.message);
                 }
-            })
-            .catch(error => {
-                // Réactiver le bouton
-                submitButton.disabled = false;
-                submitButton.textContent = originalButtonText;
-                // Afficher une erreur
-                showToast('Une erreur est survenue. Veuillez réessayer.', false);
-                console.error('Erreur:', error);
-            });
-            
-            return false;
+            },
+            error: function() {
+                alert('Une erreur technique est survenue lors de l\'envoi.');
+            }
         });
-    }
+    });
 });
 
 function openLegalPage() {
