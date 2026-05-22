@@ -19,20 +19,20 @@
     <!-- Open Graph -->
     <meta property="og:title" content="Lucas Godebout - Portfolio">
     <meta property="og:description" content="Découvrez et explorez le portfolio de Lucas Godebout, un développeur passionné.">
-    <meta property="og:image" content="/assets/images/og-image.png">
+    <meta property="og:image" content="./assets/images/og-image.png">
     <meta property="og:url" content="">
     <meta property="og:type" content="website">
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Lucas Godebout - Portfolio">
     <meta name="twitter:description" content="Découvrez et explorez le portfolio de Lucas Godebout, un développeur passionné.">
-    <meta name="twitter:image" content="/assets/images/twitter-image.png">
+    <meta name="twitter:image" content="./assets/images/twitter-image.png">
     <meta name="twitter:site" content="@VotreTwitterHandle">
 
     <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="../src/library/jquery-3.7.1.min.js"></script>
+    <script src="./assets/library/jquery-3.7.1.min.js"></script>
     <title>Lucas Godebout - Portfolio</title>
-    <link rel="icon" type="image/x-png" href="./assets/images/lurk.png">
+    <link rel="icon" type="image/x-png" href="./assets/images/icons/lurk.png">
 </head>
 <body>
     <section id="loader">

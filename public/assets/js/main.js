@@ -603,7 +603,7 @@ $(document).ready(function() {
         // Envoi via AJAX
         $.ajax({
             type: 'POST',
-            url: '/contact-gateway.php',
+            url: '../src/PHPMailer/contact.php', // Chemin vers ton fichier PHP
             data: formData,
             dataType: 'json',
             success: function(response) {
