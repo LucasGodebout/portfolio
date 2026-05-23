@@ -597,6 +597,8 @@ $(document).ready(function() {
         const formData = {
             name: $('#name').val(),
             email: $('#email').val(),
+            subject: $('#subject').val(),
+            company: $('#company').val(),
             message: $('#message').val()
         };
 
