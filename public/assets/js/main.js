@@ -603,13 +603,13 @@ $(document).ready(function() {
         // Envoi via AJAX
         $.ajax({
             type: 'POST',
-            url: '../src/PHPMailer/contact.php', // Chemin vers ton fichier PHP
+            url: './contact-gateway.php', // Chemin vers ton fichier PHP
             data: formData,
             dataType: 'json',
             success: function(response) {
                 if (response.success) {
                     alert(response.message);
-                    $('#email-form')[0].reset(); // Vide le formulaire
+                    $('#email-form')[0].reset();
                 } else {
                     alert('Erreur : ' + response.message);
                 }
