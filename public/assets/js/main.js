@@ -597,13 +597,15 @@ $(document).ready(function() {
         const formData = {
             name: $('#name').val(),
             email: $('#email').val(),
+            subject: $('#subject').val(),
+            company: $('#company').val(),
             message: $('#message').val()
         };
 
         // Envoi via AJAX
         $.ajax({
             type: 'POST',
-            url: '../src/PHPMailer/contact.php', // Chemin vers ton fichier PHP
+            url: 'contact-gateway.php', // Chemin vers ton fichier PHP
             data: formData,
             dataType: 'json',
             success: function(response) {
