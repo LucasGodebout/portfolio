@@ -38,11 +38,11 @@ $mail = new PHPMailer(true);
 
 try {
     //Server settings
-    $mail->isSMTP();                         //Send using SMTP
-    $mail->Host       = $_ENV['HOST'];    //Set the SMTP server to send through
-    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = $_ENV['USERNAME']; //SMTP username (email utilisé pour envoyer le formulaire. Il doit etre celui de la validation en deux étapes et de création de mot de passe application !)
-    $mail->Password   = $_ENV['PASSWORD']; // SMTP password (regarder la vidéo pour voir comment avoir ce mot de passe)
+    $mail->isSMTP();                                        //Send using SMTP
+    $mail->Host       = getenv('HOST');                     //Set the SMTP server to send through
+    $mail->SMTPAuth   = true;                               //Enable SMTP authentication
+    $mail->Username   = getenv('USERNAME');                 //SMTP username (email utilisé pour envoyer le formulaire. Il doit etre celui de la validation en deux étapes et de création de mot de passe application !)
+    $mail->Password   = getenv('PASSWORD');                 // SMTP password (regarder la vidéo pour voir comment avoir ce mot de passe)
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;        //Enable implicit TLS encryption
     $mail->Port       = 465;                                 //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
     
@@ -51,8 +51,8 @@ try {
     $mail->Encoding = 'base64';
 
     //Recipients
-    $mail->setFrom('lucasgodeboutcontact@gmail.com', 'Lucas Godebout prise de contact');
-    $mail->addAddress('lucasgodeboutcontact@gmail.com');     //Add a recipient
+    $mail->setFrom(getenv('USERNAME'), 'Lucas Godebout prise de contact');
+    $mail->addAddress(getenv('USERNAME'));     //Add a recipient
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
