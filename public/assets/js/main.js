@@ -615,7 +615,7 @@ $(document).ready(function() {
         // Envoi via AJAX
         $.ajax({
             type: 'POST',
-            url: 'contact-gateway.php', // Chemin vers ton fichier PHP
+            url: './contact-gateway.php', // Chemin vers ton fichier PHP
             data: formData,
             dataType: 'json',
             success: function(response) {
