@@ -194,7 +194,7 @@ const modalPages = {
         project: 'BÉNÉVOLAT',
         logiciels: ['./assets/images/tech/YouTube-Studio.svg','./assets/images/tech/Premiere.svg','./assets/images/tech/Photoshop.svg', './assets/images/tech/Blender.svg', './assets/images/tech/Discord.svg', './assets/images/tech/Notion.svg','./assets/images/tech/Blockbench.png'],
         backgroundColor: 'lightseagreen',
-        backgroundImage: 'url("images/projets/Omeega-background.gif")',
+        backgroundImage: 'url("./assets/images/projets/Omeega-background.gif")',
         textColor:'#fff',
         dateDebut: '2023-08-14',
         video: 'https://youtu.be/OyyNqhiwiAc?si=TIAa3BMcbe_qeVXT',
@@ -224,6 +224,10 @@ const emailPage = document.getElementById('email-page');
 const legalOverlay = document.getElementById('legal-overlay');
 const legalClose = document.getElementById('legal-close');
 const legalPage = document.getElementById('legal-page');
+
+const cvOverlay = document.getElementById('cv-overlay');
+const cvPage = document.getElementById('cv-page');
+const cvClose = document.getElementById('cv-close');
 
 const animations = {
     animationLogo() {
@@ -535,6 +539,12 @@ function openModalPage(pageId) {
 
     modalOverlay.style.display = 'flex';
     document.body.style.overflow = 'hidden';
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && modalOverlay.style.display === 'flex') {
+            closeModalPage();
+        }
+    });
 }
 
 function closeModalPage() {
@@ -666,14 +676,60 @@ function closeLegalPage() {
     }, 300); // Durée de l'animation
 }
 
+// Fonction pour ouvrir la modale du CV (Mentions Légales)
 function openCVPage() {
-    window.open('LucasGodeboutCV.pdf');
+    console.log('Ouverture de la page CV');
+
+    if (!cvOverlay || !cvPage) return;
+
+    cvOverlay.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+
+    if (background.videoElement && !cvPage.querySelector('.bg-video-modal')) {
+        const clonedVideo = background.videoElement.cloneNode(true);
+        clonedVideo.classList.add('bg-video-modal');
+        clonedVideo.muted = true;
+        clonedVideo.play().catch(error => console.log("Lecture du clone CV bloquée :", error));        
+        cvPage.insertBefore(clonedVideo, cvPage.firstChild);
+    }
+
+    if (cvClose) {
+        cvClose.addEventListener('click', closeCVPage);
+    }
+
+    cvOverlay.addEventListener('click', function(e) {
+        if (e.target === cvOverlay) {
+            closeCVPage();
+        }
+    });
+    
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && cvOverlay.style.display === 'flex') {
+            closeCVPage();
+        }
+    });
+}
+
+function closeCVPage() {
+    
+    if (!cvOverlay || !cvPage) return;
+
+    cvPage.classList.add('closing');
+
+    setTimeout(() => {
+        const modalVideo = cvPage.querySelector('.bg-video-modal');
+        if (modalVideo) {
+            modalVideo.remove();
+        }   
+        cvOverlay.style.display = 'none';
+        document.body.style.overflow = 'auto';
+        cvPage.classList.remove('closing');
+    }, 300);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     loaderManager.init();
     
-    // Event listener pour la fermeture modale
     if (modalClose) modalClose.addEventListener('click', closeModalPage);
     if (modalOverlay) {
         modalOverlay.addEventListener('click', (e) => {
